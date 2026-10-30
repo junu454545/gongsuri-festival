@@ -621,6 +621,29 @@ summary:focus-visible {
   outline-color: #f2ca8d;
 }
 
+.resources-list {
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+  border-top: 2px solid var(--green);
+}
+
+.resource-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.resource-item > div { flex: 1 1 240px; min-width: 0; }
+.resource-item h3 { margin: 0 0 4px; font-size: 19px; }
+.resource-item time { color: #73695e; font-size: 13px; }
+.resource-item p { margin: 8px 0 0; color: #61584f; font-size: 14px; }
+#resources-status { color: #61584f; }
+
 /* 태블릿과 작은 화면 */
 @media (max-width: 1000px) {
   .header-inner {

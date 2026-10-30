@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="공수리마을 주막할매축제 관리자 자료 등록 안내">
+  <title>관리자 등록 안내 · 주막할매축제</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="register.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">본문 바로가기</a>
+  <div class="top-bar"><div class="container top-bar-inner"><span>우리 마을의 오늘이, 내일의 이야기가 됩니다</span><a href="index.html">축제 홈페이지로 돌아가기 →</a></div></div>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html"><span class="brand-small">양구 공수리마을</span><span class="brand-title">주막할매축제</span></a>
+    <nav class="main-nav" aria-label="주요 메뉴"><a href="index.html#about">축제 소개</a><a href="index.html#resources">자료실</a><a href="register.html" aria-current="page">관리자 등록 안내</a></nav>
+  </div></header>
+  <main id="main">
+    <section class="archive-intro"><div class="container intro-layout">
+      <div><p class="eyebrow">GONGSURI VILLAGE ARCHIVE</p><p class="breadcrumb"><a href="index.html">홈</a> / 관리자 등록 안내</p><h1>오래 간직할<br>공수리의 기록<span>.</span></h1><p class="intro-copy">관리자가 등록한 사진과 안내문을<br>자료실에서 함께 나눕니다.</p></div>
+      <div class="memory-illustration" aria-hidden="true"><div class="photo-paper photo-back"></div><div class="photo-paper photo-front"><div class="paper-landscape"><span class="paper-sun"></span><span class="paper-hill"></span></div><span>우리 마을, 오래 기억할 하루</span></div><span class="memory-stamp">공수리<br>기록 모음</span></div>
+    </div></section>
+    <div class="container registration-body">
+      <aside class="availability-note" aria-label="등록 방식 안내"><span class="status-pill">관리자용</span><div><strong>자료 등록은 GitHub에서 진행합니다.</strong><p>저장소 쓰기 권한이 있는 관리자가 로그인 후 파일과 목록을 저장합니다. 이 페이지는 등록 방법을 안내하며, 방문자는 자료실에서 파일을 내려받을 수 있습니다.</p></div></aside>
+      <div class="registration-layout">
+        <div>
+          <section class="form-section" aria-labelledby="upload-title"><div class="section-title"><span class="step">01</span><div><h2 id="upload-title">공개할 파일을 올려주세요</h2><p>안내문, 포스터, 행사 사진 등을 준비합니다.</p></div></div>
+            <p>아래 버튼으로 저장소를 열고 <strong>files</strong> 폴더로 들어갑니다. <strong>Add file → Upload files</strong>로 파일을 올린 뒤 <strong>Commit changes</strong>로 저장해주세요.</p>
+            <p>작업 중인 브랜치를 사용한다면 파일과 목록을 같은 브랜치에 등록해주세요. files 폴더와 resources.json이 아직 없다면 먼저 자료실 변경사항을 반영해야 합니다.</p>
+            <p class="field-help">파일명은 festival-guide.pdf처럼 영문·숫자·하이픈을 권장합니다.</p>
+            <a class="button button-dark" href="https://github.com/junu454545/gongsuri-festival" target="_blank" rel="noopener noreferrer">GitHub에서 파일 등록 ↗</a>
+          </section>
+          <section class="form-section" aria-labelledby="list-title"><div class="section-title"><span class="step">02</span><div><h2 id="list-title">자료 목록에 추가해주세요</h2><p>제목, 날짜, 파일 위치를 입력합니다.</p></div></div>
+            <p>저장소의 <strong>resources.json</strong>을 열고 연필 모양 편집 버튼을 누릅니다. 아래 예시를 참고해 항목을 추가한 뒤 저장해주세요. 파일 위치는 실제 올린 파일명과 같아야 합니다.</p>
+            <pre class="admin-example"><code>[
+  {
+    "title": "축제 안내문",
+    "date": "2026-10-30",
+    "description": "행사 일정과 이용 안내입니다.",
+    "file": "files/festival-guide.pdf"
+  }
+]</code></pre>
+            <p class="field-help">예시는 실제 파일을 올린 뒤 사용하세요. 여러 항목은 쉼표로 구분하고 마지막 항목 뒤에는 쉼표를 넣지 않습니다. 설명은 생략할 수 있으며 최신 날짜 순으로 표시됩니다.</p>
+            <a class="button button-dark" href="https://github.com/junu454545/gongsuri-festival" target="_blank" rel="noopener noreferrer">GitHub에서 자료 목록 관리 ↗</a>
+          </section>
+          <section class="form-section" aria-labelledby="check-title"><div class="section-title"><span class="step">03</span><div><h2 id="check-title">자료실에서 확인해주세요</h2><p>운영 브랜치 반영과 배포가 끝나면 공개됩니다.</p></div></div>
+            <p>공동작업용 브랜치의 변경은 운영 브랜치에 합쳐져야 홈페이지에 반영됩니다. GitHub Pages 배포가 끝나면 제목·날짜와 파일 다운로드를 확인해주세요.</p>
+            <a class="button button-dark" href="index.html#resources">자료실 확인하기 →</a>
+          </section>
+        </div>
+        <aside class="registration-sidebar"><div class="sidebar-card"><p class="eyebrow">ADMIN GUIDE</p><h2>등록 전에<br>확인해주세요</h2><ul class="archive-ideas">
+          <li><span>01</span><div><strong>관리자 계정으로 등록</strong><p>등록과 수정 권한은 GitHub에서 관리합니다.</p></div></li>
+          <li><span>02</span><div><strong>공개 가능한 자료만</strong><p>방문자는 로그인 없이 파일을 내려받을 수 있습니다. 사진의 공개 동의도 확인해주세요.</p></div></li>
+          <li><span>03</span><div><strong>수정과 삭제</strong><p>resources.json의 항목을 수정하거나 제거합니다. 목록에서만 지우면 기존 파일 주소로는 계속 접근할 수 있으므로 필요하면 파일도 삭제해주세요.</p></div></li>
+        </ul><div class="sidebar-note"><strong>홈페이지에서 바로 업로드하지 않습니다.</strong><p>파일 선택·임시 저장 대신 GitHub에서 파일과 목록을 저장합니다.</p></div></div></aside>
+      </div>
+    </div>
+  </main>
+  <footer class="registration-footer"><div class="container"><a href="index.html#resources">축제 자료실로 돌아가기 →</a><p>함께 만든 축제, 함께 남기는 기억.</p><small>© 2026 공수리마을 주막할매축제</small></div></footer>
+</body>
+</html>

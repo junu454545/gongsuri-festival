@@ -114,10 +114,10 @@
 .village-layout .footer-brand span,.village-layout .footer-content p,.village-layout .copyright { color:#796755; }
 .village-layout .footer-links { border-color:#EEE8E3; }
 
-/* Alternating white and barely pink section backgrounds. */
-.village-layout .hero { background:#FCF5F4; }
+/* Consistent white section backgrounds. */
+.village-layout .hero { background:#fff; }
 .village-layout #about { background:#fff; }
-.village-layout .program-section { background:#FCF5F4; }
+.village-layout .program-section { background:#fff; }
 .village-layout #guide { background:#fff; }
-.village-layout .info-area { background:#FCF5F4; }
+.village-layout .info-area { background:#fff; }
 .village-layout #resources,.village-layout .festival-footer { background:#fff; }

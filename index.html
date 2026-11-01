@@ -16,6 +16,18 @@
   <link rel="stylesheet" href="layout.css?v=20261101-white-pastel">
   <link rel="stylesheet" href="ui.css?v=20261101-white">
   <link rel="stylesheet" href="booths.css?v=20261101">
+
+  <style>
+    .village-layout .festival-location { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,2fr); gap:48px; align-items:center; }
+    .festival-location .location-copy h2 { margin:0 0 28px; font-size:clamp(28px,3vw,40px); letter-spacing:.04em; }
+    .festival-location .location-address { margin:0; font-size:clamp(18px,1.8vw,24px); line-height:1.9; }
+    .location-map { min-width:0; overflow:hidden; border:1px solid #eee8e3; border-radius:18px; background:#f6f1ed; }
+    .location-map iframe { display:block; width:100%; height:440px; border:0; }
+    @media(max-width:750px) {
+      .village-layout .festival-location { grid-template-columns:1fr; gap:28px; }
+      .location-map iframe { height:340px; }
+    }
+  </style>
 </head>
 
 <body id="top" class="village-layout">
@@ -42,7 +54,6 @@
         <a href="#programs">체험 프로그램</a>
         <a href="#guide">이용 안내</a>
         <a href="#location">오시는 길</a>
-        <a href="#notice">공지사항</a>
         <a href="#resources">자료실</a>
       </nav>
     </div>
@@ -98,12 +109,6 @@
         <span class="quick-number">찾아오는 길</span>
         <strong>오시는 길</strong>
         <span>공수리에서 만나요 →</span>
-      </a>
-
-      <a href="#notice">
-        <span class="quick-number">새 소식</span>
-        <strong>공지사항</strong>
-        <span>축제 소식을 확인하세요 →</span>
       </a>
     </nav>
 
@@ -273,67 +278,36 @@
           <p>
             날씨와 현장 상황에 따라 운영 내용이
             달라질 수 있습니다.
-            방문 전 홈페이지 공지사항을 확인해주세요.
+            현장 운영 안내를 확인해주세요.
           </p>
         </article>
       </div>
     </section>
 
-    <!-- 공지와 위치 -->
-    <div class="info-area">
-      <div class="container info-grid">
-
-        <section id="notice" class="info-panel">
-          <p class="eyebrow">NOTICE</p>
-          <h2>축제 소식</h2>
-
-          <details class="notice-item" open>
-            <summary>2026 주막할매축제 일정 안내</summary>
-            <p>
-              2026년 10월 10일 토요일,
-              오전 11시부터 오후 5시까지
-              공수대교 근처 정자 일대에서 진행됩니다.
-            </p>
-          </details>
-
-          <details class="notice-item">
-            <summary>체험 프로그램 참여 안내</summary>
-            <p>
-              부스별 참여 방법과 엽전 안내는
-              홈페이지의 축제 부스 안내문을 확인해주세요.
-            </p>
-          </details>
-
-          <details class="notice-item">
-            <summary>주차 및 행사장 입구 안내</summary>
-            <p>
-              정확한 행사장 입구와 주차장 위치는
-              현장 확인 후 추가하겠습니다.
-            </p>
-          </details>
-        </section>
-
-        <section id="location" class="info-panel location-panel">
-          <p class="eyebrow">LOCATION</p>
-          <h2>공수리에서 만나요</h2>
-
+    <!-- 행사장 위치 -->
+    <section id="location" class="info-area" aria-labelledby="location-title">
+      <div class="container festival-location">
+        <div class="location-copy">
+          <h2 id="location-title">LOCATION</h2>
           <p class="location-address">
-            강원특별자치도 양구군 양구읍 공수리<br>
+            강원특별자치도 양구군<br>
+            양구읍 공수리<br>
             <strong>공수대교 근처 정자 일대</strong>
           </p>
-
-          <a
-            class="button button-dark"
-            href="https://map.naver.com/p/search/양구%20공수대교"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            네이버지도에서 검색 ↗
-          </a>
-        </section>
-
+        </div>
+        <div class="location-map">
+          <iframe
+            title="양구 공수대교 위치 지도"
+            src="https://maps.google.com/maps?q=%EC%96%91%EA%B5%AC%20%EA%B3%B5%EC%88%98%EB%8C%80%EA%B5%90&amp;output=embed&amp;hl=ko&amp;z=15"
+            width="800"
+            height="440"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
-    </div>
+    </section>
     <section id="resources" class="section container" aria-labelledby="resources-title">
       <div class="section-heading">
         <p class="eyebrow">DOWNLOADS</p>

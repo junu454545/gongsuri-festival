@@ -1,0 +1,110 @@
+/* Village festival: open layouts and restrained warm accents. */
+.village-layout { background:#fff; }
+.village-layout .container { width:min(1240px,calc(100% - 80px)); }
+.village-layout .top-bar { background:#faf9f6; font-size:11px; }
+.village-layout .header-inner { padding:25px 0; gap:40px; }
+.village-layout .brand-title { font-size:29px; letter-spacing:-2px; }
+.village-layout .brand-small { font-size:11px; letter-spacing:.12em; }
+.village-layout .main-nav { gap:28px; }
+.village-layout .main-nav a { font-size:14px; }
+.village-layout .site-header { border-bottom:1px solid #e8e3da; }
+.village-layout .hero { display:grid; grid-template-columns:56% 44%; background:#f4f0e8; }
+.hero-photo { background:url('사진/배경/KakaoTalk_20261101_101232154.jpg') center 42% / cover no-repeat; min-height:580px; }
+.village-layout .hero-inner { width:100%; min-height:580px; display:flex; align-items:center; padding:60px clamp(30px,4vw,75px); }
+.village-layout .hero-copy { width:100%; text-align:left; }
+.village-layout .hero-label { font-size:12px; letter-spacing:.12em; color:#805331; }
+.village-layout .hero-intro { font-size:16px; font-weight:400; margin-top:28px; }
+.village-layout .hero h1 { font-size:clamp(36px,4.25vw,65px); letter-spacing:-.065em; line-height:1.22; margin:18px 0 28px; }
+.village-layout .hero h1 span { color:#805331; }
+.village-layout .hero-description { font-size:14px; line-height:1.9; color:#75695e; }
+.village-layout .button { border-radius:0; padding:13px 20px; }
+.village-layout .quick-links { margin:0 auto; border:0; box-shadow:none; border-bottom:1px solid #e8e3da; }
+.village-layout .quick-links a { padding:28px 20px; background:white; }
+.village-layout .quick-links a:first-child { padding-left:0; }
+.village-layout .quick-links a + a { border:0; }
+.village-layout .quick-number { font-size:10px; font-weight:400; color:#8b6b4d; margin-bottom:8px; }
+.village-layout .quick-links strong { font-size:19px; }
+.village-layout .quick-links span:last-child { margin-top:8px; color:#7e756b; }
+.village-layout .section { padding-top:100px; padding-bottom:100px; }
+.village-layout #about { display:grid; grid-template-columns:1fr 1fr; align-items:end; gap:90px; }
+.village-layout .eyebrow { color:#9c6233; font-size:12px; font-weight:500; letter-spacing:.08em; margin-bottom:22px; }
+.village-layout .section-heading h2 { font-size:clamp(29px,3.2vw,44px); letter-spacing:-.055em; line-height:1.35; font-weight:800; }
+.village-layout .about-description { font-size:16px; line-height:2; padding-bottom:20px; }
+.village-layout .schedule-bar { background:#faf9f6; border-top:1px solid #e8e3da; border-bottom:1px solid #e8e3da; }
+.village-layout .schedule-inner { padding:30px 0; }
+.village-layout .schedule-label { color:#8b6b4d; font-size:11px; }
+.village-layout .schedule-inner strong { font-size:20px; }
+.village-layout .program-section { background:white; }
+.village-layout .program-section .section-heading { margin-bottom:35px; }
+.program-filters { display:flex; flex-wrap:wrap; gap:10px; margin:32px 0 40px; }
+.program-filters button { border:1px solid #e3dbcf; border-radius:30px; background:white; padding:11px 22px; font:inherit; font-size:13px; color:#70675d; cursor:pointer; }
+.program-filters button.active { border-color:#805331; background:#805331; color:white; }
+.program-filters button:focus-visible { outline:2px solid #805331; outline-offset:4px; }
+.village-layout .program-grid { display:block; margin:0; }
+.village-layout .program-card { display:grid; grid-template-columns:32% 1fr; border:0; border-top:1px solid #ded6cb; border-radius:0; padding:38px 0; gap:65px; overflow:visible; }
+.village-layout .program-card[hidden] { display:none; }
+.village-layout .card-cover { background:transparent; border:0; min-height:0; padding:0; overflow:visible; }
+.village-layout .card-cover>span:first-child { color:#89705b; font-size:12px; }
+.village-layout .card-cover strong { font-size:30px; line-height:1.3; margin:12px 0 0; letter-spacing:-1.5px; }
+.village-layout .cover-number { position:static; display:block; font-size:12px; color:#a7896b; opacity:1; margin-top:25px; }
+.village-layout .card-body { padding:0; display:grid; grid-template-columns:1fr 210px; column-gap:30px; }
+.village-layout .badge { padding:0; background:none; border-radius:0; font-size:11px; color:#805331; }
+.village-layout .card-body h3 { grid-column:1; font-size:21px; margin:10px 0 15px; }
+.village-layout .card-body>p { grid-column:1; font-size:14px; line-height:1.9; margin-bottom:0; }
+.village-layout .card-note { grid-column:2; grid-row:1 / 4; align-self:center; padding:0 0 0 25px; border:0; border-left:1px solid #e8e3da; line-height:1.9; font-size:12px; }
+.village-layout .pending-program { border:0; border-top:1px solid #ded6cb; border-radius:0; padding:25px 0; margin:0; }
+.village-layout #guide { border-top:1px solid #e8e3da; }
+.village-layout .guide-grid { gap:45px; margin-top:40px; }
+.village-layout .guide-card { padding:25px 0 0; background:transparent; border-top:1px solid #c49a6c; }
+.village-layout .guide-card h3 { font-size:19px; }
+.village-layout .guide-card p { line-height:1.9; }
+.village-layout .info-area { background:#faf9f6; padding:80px 0; }
+.village-layout .info-grid { gap:75px; }
+.village-layout .info-panel { padding:0; border:0; border-radius:0; background:transparent; }
+.village-layout .info-panel h2 { font-size:32px; letter-spacing:-1.5px; }
+.village-layout .notice-item { padding:20px 0; }
+.village-layout .location-address { font-size:20px; line-height:1.8; }
+.village-layout .festival-footer { background:#352e26; }
+@media(max-width:1050px) {
+ .village-layout .header-inner { gap:20px; }
+ .village-layout .main-nav { gap:18px; }
+ .village-layout .hero-inner { padding:40px 30px; }
+ .village-layout .hero h1 { font-size:42px; }
+ .village-layout .hero-description br { display:none; }
+ .village-layout .card-body { grid-template-columns:1fr; }
+ .village-layout .card-note { grid-column:1; grid-row:auto; margin-top:20px; padding:15px 0 0; border:0; border-top:1px solid #e8e3da; }
+}
+@media(max-width:650px) {
+ .village-layout .container { width:calc(100% - 40px); }
+ .village-layout .header-inner { padding:20px 0 16px; }
+ .village-layout .main-nav { gap:12px 19px; }
+ .village-layout .main-nav a { font-size:12px; }
+ .village-layout .hero { grid-template-columns:1fr; }
+ .hero-photo { min-height:0; aspect-ratio:1.65; background-position:center 42%; }
+ .village-layout .hero-inner { min-height:0; padding:34px 24px 40px; }
+ .village-layout .hero-intro { margin-top:18px; font-size:14px; }
+ .village-layout .hero h1 { font-size:43px; margin:14px 0 20px; }
+ .village-layout .hero-description { font-size:13px; }
+ .village-layout .quick-links { grid-template-columns:repeat(2,1fr); }
+ .village-layout .quick-links a { padding:22px 12px; }
+ .village-layout .quick-links a:first-child { padding-left:12px; }
+ .village-layout .quick-links a:nth-child(n+3) { border-top:1px solid #e8e3da; }
+ .village-layout .quick-links strong { font-size:16px; }
+ .village-layout .quick-links span:last-child { font-size:10px; }
+ .village-layout .section { padding-top:60px; padding-bottom:60px; }
+ .village-layout #about { grid-template-columns:1fr; gap:18px; }
+ .village-layout .about-description { font-size:14px; padding-bottom:0; }
+ .village-layout .schedule-inner { gap:18px; }
+ .village-layout .schedule-inner>div { display:flex; gap:18px; align-items:baseline; }
+ .village-layout .schedule-label { min-width:50px; }
+ .village-layout .schedule-inner strong { font-size:16px; }
+ .program-filters { gap:7px; margin-bottom:25px; }
+ .program-filters button { padding:8px 12px; font-size:11px; }
+ .village-layout .program-card { grid-template-columns:1fr; gap:24px; padding:28px 0; }
+ .village-layout .card-cover strong { font-size:28px; }
+ .village-layout .cover-number { display:none; }
+ .village-layout .card-body h3 { font-size:19px; }
+ .village-layout .guide-grid { gap:24px; }
+ .village-layout .info-area { padding:60px 0; }
+ .village-layout .info-grid { grid-template-columns:1fr; gap:55px; }
+}

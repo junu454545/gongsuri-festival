@@ -13,9 +13,10 @@
   >
 
   <link rel="stylesheet" href="style.css?v=20261101-quiet">
+  <link rel="stylesheet" href="layout.css?v=20261101-village">
 </head>
 
-<body id="top">
+<body id="top" class="village-layout">
   <a class="skip-link" href="#main">본문 바로가기</a>
 
   <!-- 상단 작은 안내 -->
@@ -49,9 +50,10 @@
 
     <!-- 큰 홍보 화면 -->
     <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-photo" role="img" aria-label="공수리마을 주막할매축제 현수막과 현장 풍경"></div>
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="hero-label">2026 GONGSURI VILLAGE FESTIVAL</p>
+          <p class="hero-label">2026 · 양구 공수리</p>
 
           <p class="hero-intro">가을 하루, 정겨운 마을로 놀러오세요</p>
 
@@ -71,6 +73,48 @@
         </div>
 
       </div>
+    </section>
+
+    <!-- 바로가기 -->
+    <nav class="container quick-links" aria-label="방문객 바로가기">
+      <a href="#programs">
+        <span class="quick-number">즐길거리</span>
+        <strong>체험 프로그램</strong>
+        <span>어떤 즐거움이 기다릴까요? →</span>
+      </a>
+
+      <a href="#guide">
+        <span class="quick-number">방문 전</span>
+        <strong>이용 안내</strong>
+        <span>방문 전에 확인해주세요 →</span>
+      </a>
+
+      <a href="#location">
+        <span class="quick-number">찾아오는 길</span>
+        <strong>오시는 길</strong>
+        <span>공수리에서 만나요 →</span>
+      </a>
+
+      <a href="#notice">
+        <span class="quick-number">새 소식</span>
+        <strong>공지사항</strong>
+        <span>축제 소식을 확인하세요 →</span>
+      </a>
+    </nav>
+
+    <!-- 소개 -->
+    <section id="about" class="section container">
+      <div class="section-heading">
+        <p class="eyebrow">공수리 이야기</p>
+        <h2>우리 마을의 가을에<br>당신을 초대합니다.</h2>
+      </div>
+
+      <p class="about-description">
+        양구 공수리마을 주막할매축제는 가족과 함께하는 만들기 체험,
+        지역 막걸리를 알아보는 시음 게임,
+        마을의 이야기를 만드는 참여 프로그램으로 여러분을 만납니다.
+        공수대교 근처 정자 일대에서 공수리의 가을을 즐겨보세요.
+      </p>
     </section>
 
     <!-- 운영 정보 띠 -->
@@ -93,59 +137,19 @@
       </div>
     </section>
 
-    <!-- 바로가기 -->
-    <nav class="container quick-links" aria-label="방문객 바로가기">
-      <a href="#programs">
-        <span class="quick-number">01</span>
-        <strong>체험 프로그램</strong>
-        <span>어떤 즐거움이 기다릴까요? →</span>
-      </a>
-
-      <a href="#guide">
-        <span class="quick-number">02</span>
-        <strong>이용 안내</strong>
-        <span>방문 전에 확인해주세요 →</span>
-      </a>
-
-      <a href="#location">
-        <span class="quick-number">03</span>
-        <strong>오시는 길</strong>
-        <span>공수리에서 만나요 →</span>
-      </a>
-
-      <a href="#notice">
-        <span class="quick-number">04</span>
-        <strong>공지사항</strong>
-        <span>축제 소식을 확인하세요 →</span>
-      </a>
-    </nav>
-
-    <!-- 소개 -->
-    <section id="about" class="section container">
-      <div class="section-heading">
-        <p class="eyebrow">ABOUT THE FESTIVAL</p>
-        <h2>마을의 정을 만나고,<br>나만의 추억을 만드는 하루</h2>
-      </div>
-
-      <p class="about-description">
-        양구 공수리마을 주막할매축제는 가족과 함께하는 만들기 체험,
-        지역 막걸리를 알아보는 시음 게임,
-        마을의 이야기를 만드는 참여 프로그램으로 여러분을 만납니다.
-        공수대교 근처 정자 일대에서 공수리의 가을을 즐겨보세요.
-      </p>
-    </section>
 
     <!-- 프로그램 -->
     <section id="programs" class="program-section">
       <div class="container section">
         <div class="section-heading">
-          <p class="eyebrow">FESTIVAL PROGRAMS</p>
+          <p class="eyebrow">공수리에서 즐기기</p>
           <h2>함께 즐기는 체험 프로그램</h2>
           <p>내 손으로 만들고, 맛보고, 이야기를 나누세요.</p>
         </div>
 
-        <div class="program-grid">
-          <article class="program-card">
+        <div class="program-filters" role="group" aria-label="프로그램 대상별 보기"><button type="button" class="active" data-filter="all" aria-pressed="true">전체 프로그램</button><button type="button" data-filter="family" aria-pressed="false">어린이 · 가족</button><button type="button" data-filter="adult" aria-pressed="false">성인</button><button type="button" data-filter="everyone" aria-pressed="false">누구나</button></div>
+        <div class="program-grid" aria-live="polite">
+          <article class="program-card" data-audience="family">
             <div class="card-cover cover-craft">
               <span>빛과 마음을 담아요</span>
               <strong>백자 꾸미기</strong>
@@ -167,7 +171,7 @@
             </div>
           </article>
 
-          <article class="program-card">
+          <article class="program-card" data-audience="adult">
             <div class="card-cover cover-drink">
               <span>지역의 맛을 찾아요</span>
               <strong>막걸리 찾기</strong>
@@ -189,7 +193,7 @@
             </div>
           </article>
 
-          <article class="program-card">
+          <article class="program-card" data-audience="everyone">
             <div class="card-cover cover-story">
               <span>우리의 이야기를 나눠요</span>
               <strong>공수리 한마디</strong>
@@ -225,7 +229,7 @@
     <!-- 이용 안내 -->
     <section id="guide" class="section container">
       <div class="section-heading">
-        <p class="eyebrow">VISITOR GUIDE</p>
+        <p class="eyebrow">방문 안내</p>
         <h2>방문 전에 확인해주세요</h2>
       </div>
 
@@ -363,5 +367,6 @@
     </div>
   </footer>
   <script src="resources.js" defer></script>
+  <script src="layout.js?v=20261101-village"></script>
 </body>
 </html>

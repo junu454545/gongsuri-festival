@@ -23,6 +23,12 @@
     .festival-location .location-address { margin:0; font-size:clamp(18px,1.8vw,24px); line-height:1.9; }
     .location-map { min-width:0; overflow:hidden; border:1px solid #eee8e3; border-radius:18px; background:#f6f1ed; }
     .location-map iframe { display:block; width:100%; height:440px; border:0; }
+    .location-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .location-links a { border:1px solid #e7ddd5; border-radius:30px; padding:10px 14px; color:#81624c; background:#fff; font-size:12px; font-weight:700; }
+    .location-links a:hover { background:#f6f1ed; border-color:#c6ac98; }
+    .kakao-location-preview { display:block; position:relative; background:#fff; }
+    .kakao-location-preview img { display:block; width:100%; height:auto; }
+    .kakao-location-preview > span { display:block; padding:14px 20px; color:#81624c; font-size:13px; font-weight:700; border-top:1px solid #eee8e3; text-align:right; }
     @media(max-width:750px) {
       .village-layout .festival-location { grid-template-columns:1fr; gap:28px; }
       .location-map iframe { height:340px; }
@@ -294,17 +300,17 @@
             양구읍 공수리<br>
             <strong>공수대교 근처 정자 일대</strong>
           </p>
+          <nav class="location-links" aria-label="지도 서비스에서 행사장 찾기">
+            <a href="https://map.naver.com/p/search/%EC%96%91%EA%B5%AC%20%EA%B3%B5%EC%88%98%EB%8C%80%EA%B5%90" target="_blank" rel="noopener noreferrer">네이버지도 ↗</a>
+            <a href="https://map.kakao.com/link/map/1473094165" target="_blank" rel="noopener noreferrer">카카오맵 ↗</a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=%EC%96%91%EA%B5%AC%20%EA%B3%B5%EC%88%98%EB%8C%80%EA%B5%90" target="_blank" rel="noopener noreferrer">구글맵 ↗</a>
+          </nav>
         </div>
         <div class="location-map">
-          <iframe
-            title="양구 공수대교 위치 지도"
-            src="https://maps.google.com/maps?q=%EC%96%91%EA%B5%AC%20%EA%B3%B5%EC%88%98%EB%8C%80%EA%B5%90&amp;output=embed&amp;hl=ko&amp;z=15"
-            width="800"
-            height="440"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-          ></iframe>
+          <a class="kakao-location-preview" href="https://map.kakao.com/link/map/1473094165" target="_blank" rel="noopener noreferrer" aria-label="공수대교 위치를 카카오맵에서 크게 보기">
+            <img src="assets/location/kakao-gongsu-map.jpg" alt="카카오맵에 표시된 공수대교 위치. 공수리와 성곡리를 잇는 공수대교가 중심에 표시되어 있습니다." width="877" height="720" loading="lazy">
+            <span>카카오맵에서 크게 보기 ↗</span>
+          </a>
         </div>
       </div>
     </section>

@@ -498,14 +498,14 @@ summary:focus-visible {
 
 /* 하단 */
 .festival-footer {
-  padding: 35px 0;
+  padding: 35px 0 max(96px, calc(96px + env(safe-area-inset-bottom, 0px)));
   background: var(--navy);
   color: white;
 }
 
 .footer-inner {
   display: grid;
-  grid-template-columns: 190px minmax(0, 1fr) 48px;
+  grid-template-columns: 190px minmax(0, 1fr);
   gap: 30px;
 }
 
@@ -548,6 +548,10 @@ summary:focus-visible {
 }
 
 .back-top {
+  position: fixed;
+  right: calc(24px + env(safe-area-inset-right, 0px));
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -556,6 +560,11 @@ summary:focus-visible {
   background: white;
   color: var(--navy);
   font-size: 28px;
+}
+
+.back-top:focus-visible {
+  outline: 3px solid #81624c;
+  outline-offset: 4px;
 }
 
 .festival-footer a:focus-visible {
@@ -696,7 +705,7 @@ summary:focus-visible {
   }
 
   .footer-inner {
-    grid-template-columns: minmax(0, 1fr) 48px;
+    grid-template-columns: minmax(0, 1fr);
     gap: 22px;
   }
 
@@ -706,8 +715,8 @@ summary:focus-visible {
   }
 
   .back-top {
-    grid-column: 2;
-    grid-row: 1;
+    right: calc(16px + env(safe-area-inset-right, 0px));
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
   }
 
   .footer-content {

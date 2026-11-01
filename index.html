@@ -13,10 +13,9 @@
   >
 
   <link rel="stylesheet" href="style.css?v=20261101-blue">
-  <link rel="stylesheet" href="festival.css?v=20261101-layout">
 </head>
 
-<body id="top" class="festival-page">
+<body id="top">
   <a class="skip-link" href="#main">본문 바로가기</a>
 
   <!-- 상단 작은 안내 -->
@@ -48,21 +47,84 @@
 
   <main id="main">
 
-    <section class="festival-hero" aria-labelledby="hero-title">
-      <div class="hero-photo"><img src="사진/배경/KakaoTalk_20261101_101232154.jpg" alt="공수리마을 주막할매축제 현수막과 축제 현장" fetchpriority="high"></div>
-      <div class="festival-masthead">
-        <div class="masthead-top"><span>2026 GONGSURI VILLAGE FESTIVAL</span><span>양구, 공수리에서 만나요.</span></div>
-        <h1 id="hero-title">공수리마을 <span>주막할매축제</span></h1>
-        <div class="masthead-bottom"><strong>2026. 10. 10. SAT</strong><span>11:00—17:00</span><a href="#location">공수대교 근처 정자 일대 ↗</a></div>
+    <!-- 큰 홍보 화면 -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="hero-label">2026 GONGSURI VILLAGE FESTIVAL</p>
+
+          <p class="hero-intro">가을 하루, 정겨운 마을로 놀러오세요</p>
+
+          <h1 id="hero-title">
+            공수리마을<br>
+            <span>주막할매축제</span>
+          </h1>
+
+          <p class="hero-description">
+            백자에 추억을 담고, 지역의 맛을 만나고<br>
+            우리 함께 공수리의 이야기를 만들어봐요.
+          </p>
+
+          <a class="button button-dark" href="#programs">
+            체험 프로그램 살펴보기 →
+          </a>
+        </div>
+
       </div>
     </section>
-    <div class="festival-ribbon" aria-label="축제 안내"><span>GONGSURI VILLAGE FESTIVAL</span><span>공수리의 가을, 함께하는 하루</span><span aria-hidden="true">GONGSURI VILLAGE FESTIVAL</span></div>
+
+    <!-- 운영 정보 띠 -->
+    <section class="schedule-bar" aria-label="축제 날짜와 장소">
+      <div class="container schedule-inner">
+        <div>
+          <span class="schedule-label">축제 날짜</span>
+          <strong>2026. 10. 10. <small>토요일</small></strong>
+        </div>
+
+        <div>
+          <span class="schedule-label">운영 시간</span>
+          <strong>11:00 ~ 17:00</strong>
+        </div>
+
+        <div>
+          <span class="schedule-label">행사 장소</span>
+          <strong>공수대교 근처 정자 일대</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- 바로가기 -->
+    <nav class="container quick-links" aria-label="방문객 바로가기">
+      <a href="#programs">
+        <span class="quick-number">01</span>
+        <strong>체험 프로그램</strong>
+        <span>어떤 즐거움이 기다릴까요? →</span>
+      </a>
+
+      <a href="#guide">
+        <span class="quick-number">02</span>
+        <strong>이용 안내</strong>
+        <span>방문 전에 확인해주세요 →</span>
+      </a>
+
+      <a href="#location">
+        <span class="quick-number">03</span>
+        <strong>오시는 길</strong>
+        <span>공수리에서 만나요 →</span>
+      </a>
+
+      <a href="#notice">
+        <span class="quick-number">04</span>
+        <strong>공지사항</strong>
+        <span>축제 소식을 확인하세요 →</span>
+      </a>
+    </nav>
 
     <!-- 소개 -->
     <section id="about" class="section container">
       <div class="section-heading">
         <p class="eyebrow">ABOUT THE FESTIVAL</p>
-        <h2>가을 하루,<br>공수리에서 만나요.</h2>
+        <h2>마을의 정을 만나고,<br>나만의 추억을 만드는 하루</h2>
       </div>
 
       <p class="about-description">
@@ -78,7 +140,7 @@
       <div class="container section">
         <div class="section-heading">
           <p class="eyebrow">FESTIVAL PROGRAMS</p>
-          <h2>만들고, 맛보고, 함께하고.</h2>
+          <h2>함께 즐기는 체험 프로그램</h2>
           <p>내 손으로 만들고, 맛보고, 이야기를 나누세요.</p>
         </div>
 
@@ -158,11 +220,6 @@
           </p>
         </div>
       </div>
-    </section>
-
-    <section class="section container festival-scenes" aria-labelledby="scenes-title">
-      <div class="section-heading"><p class="eyebrow">FESTIVAL SCENES</p><h2 id="scenes-title">공수리의 하루</h2><p>마을 곳곳에 모인 사람들, 함께 만든 축제의 풍경.</p></div>
-      <div class="scene-grid"><figure><img src="사진/KakaoTalk_20261101_101930721.jpg" alt="축제 체험 부스에서 함께 만들기를 즐기는 가족들" loading="lazy"><figcaption>함께 만드는 시간</figcaption></figure><figure><img src="사진/KakaoTalk_20261101_101848873_03.jpg" alt="만국기가 걸린 공수리마을 야외 공연장" loading="lazy"><figcaption>마을이 무대가 되는 날</figcaption></figure></div>
     </section>
 
     <!-- 이용 안내 -->

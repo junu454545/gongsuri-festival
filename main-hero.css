@@ -1,0 +1,41 @@
+/* Illustrated festival key visual, using the user's original artwork. */
+.village-layout .hero { position:relative; display:block; width:100%; margin:0; border-radius:0; background:#d7effb; isolation:isolate; }
+.main-festival-art { display:block; width:100%; height:auto; min-height:440px; object-fit:cover; object-position:center; }
+.village-layout .hero-inner { position:absolute; inset:0; width:min(1240px,calc(100% - 80px)); min-height:0; padding:0; margin:0 auto; display:flex; align-items:center; }
+.village-layout .hero-copy { width:46%; max-width:540px; padding:24px 0; text-align:left; }
+.village-layout .hero-label { margin:0 0 12px; padding:5px 13px; background:rgb(255 255 255 / 80%); color:#5d422c; border:1px solid rgb(128 99 77 / 20%); font-size:11px; }
+.village-layout .hero-intro { margin:0 0 12px; font-size:16px; font-weight:700; color:#3e3a2c; text-shadow:0 1px 6px rgb(255 255 255 / 75%); }
+.village-layout .hero h1 { margin:0 0 20px; color:#2a1a0e; font-size:clamp(42px,4.7vw,76px); font-weight:900; line-height:1.16; letter-spacing:-.07em; text-shadow:0 2px 0 rgb(255 255 255 / 70%),0 0 18px rgb(255 255 255 / 65%); }
+.village-layout .hero h1 span { color:#694326; }
+.hero-event-date { display:flex; flex-direction:column; gap:4px; margin:0 0 22px; color:#332a22; }
+.hero-event-date strong { font-size:19px; letter-spacing:-.5px; }
+.hero-event-date span { font-size:12px; font-weight:700; text-shadow:0 1px 5px white; }
+.village-layout .hero-actions { gap:10px; }
+.village-layout .hero-actions .button { padding:12px 21px; font-size:12px; }
+.village-layout .hero-actions .button-dark { background:#c6ac98; color:#38281c; border-color:#b0927b; box-shadow:0 4px 12px rgb(87 60 40 / 12%); }
+.village-layout .hero-actions .button-outline { background:rgb(255 255 255 / 85%); color:#694326; border-color:#b0927b; }
+@media(min-width:1700px) { .village-layout .hero-inner { width:calc(100% - 14%); max-width:1700px; } }
+@media(max-width:900px) and (min-width:651px) {
+ .village-layout .hero-inner { width:calc(100% - 48px); }
+ .main-festival-art { min-height:420px; object-position:55% center; }
+ .village-layout .hero-copy { width:49%; }
+ .village-layout .hero h1 { font-size:43px; }
+ .village-layout .hero-intro { font-size:13px; }
+ .hero-event-date strong { font-size:16px; }
+ .hero-event-date span { font-size:11px; }
+ .village-layout .hero-actions .button { padding:10px 14px; font-size:11px; }
+}
+@media(max-width:650px) {
+ .main-festival-art { width:100%; height:240px; min-height:0; object-fit:cover; object-position:75% center; }
+ .village-layout .hero { background:white; }
+ .village-layout .hero-inner { position:relative; inset:auto; width:100%; padding:28px 24px 32px; }
+ .village-layout .hero-copy { width:100%; max-width:none; padding:0; }
+ .village-layout .hero-label { font-size:10px; margin-bottom:14px; background:#f6f1ed; }
+ .village-layout .hero-intro { font-size:13px; text-shadow:none; margin-bottom:10px; }
+ .village-layout .hero h1 { font-size:39px; text-shadow:none; margin-bottom:18px; }
+ .hero-event-date { margin-bottom:22px; }
+ .hero-event-date strong { font-size:17px; }
+ .hero-event-date span { font-size:11px; }
+ .village-layout .hero-actions { flex-wrap:wrap; gap:10px; }
+ .village-layout .hero-actions .button { padding:12px 17px; font-size:11px; }
+}

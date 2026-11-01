@@ -1,12 +1,12 @@
 /* 공통 색상 */
 :root {
-  --cream: #faf9f6;
+  --cream: #fffcf7;
   --paper: #ffffff;
-  --ink: #352e26;
-  --orange: #9c6233;
-  --green: #805331;
-  --line: #e5d9bd;
-  --navy: #352e26;
+  --ink: #2a1a0e;
+  --orange: #a44716;
+  --green: #a44716;
+  --line: #e7d6c0;
+  --navy: #2a1a0e;
 }
 
 /* 기본 설정 */
@@ -127,9 +127,9 @@ summary:focus-visible {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background-color: #f4f0e8;
+  background-color: #fef3e2;
   background-image:
-    linear-gradient(90deg, rgb(250 249 246 / 8%) 0%, rgb(250 249 246 / 12%) 40%, rgb(250 249 246 / 88%) 72%, rgb(250 249 246 / 96%) 100%),
+    linear-gradient(90deg, rgb(255 252 247 / 8%) 0%, rgb(255 252 247 / 12%) 40%, rgb(255 252 247 / 88%) 72%, rgb(255 252 247 / 96%) 100%),
     url("사진/배경/KakaoTalk_20261101_101232154.jpg");
   background-size: cover;
   background-position: 75% center;
@@ -196,7 +196,7 @@ summary:focus-visible {
 }
 
 .button-dark:hover {
-  background: #664125;
+  background: #823810;
 }
 
 /* 운영 정보 */
@@ -214,13 +214,13 @@ summary:focus-visible {
 
 .schedule-inner > div {
   padding-left: 20px;
-  border-left: 1px solid rgb(250 249 246 / 30%);
+  border-left: 1px solid rgb(255 252 247 / 30%);
 }
 
 .schedule-label {
   display: block;
   margin-bottom: 4px;
-  color: #352e26;
+  color: #2a1a0e;
   font-size: 12px;
 }
 
@@ -272,7 +272,7 @@ summary:focus-visible {
 
 .quick-links span:last-child {
   margin-top: 5px;
-  color: #75645b;
+  color: #796755;
   font-size: 12px;
 }
 
@@ -298,13 +298,13 @@ summary:focus-visible {
 }
 
 .section-heading > p:last-child {
-  color: #75645b;
+  color: #796755;
 }
 
 .about-description {
   max-width: 850px;
   margin-bottom: 0;
-  color: #65574f;
+  color: #6f5b48;
   font-size: 17px;
 }
 
@@ -356,18 +356,18 @@ summary:focus-visible {
 }
 
 .cover-craft {
-  background: #f4f0e8;
-  color: #70533c;
+  background: #fef3e2;
+  color: #745038;
 }
 
 .cover-drink {
-  background: #f4f0e8;
-  color: #70533c;
+  background: #fef3e2;
+  color: #745038;
 }
 
 .cover-story {
-  background: #c87836;
-  color: #70533c;
+  background: #d4621a;
+  color: #745038;
 }
 
 .card-body {
@@ -378,7 +378,7 @@ summary:focus-visible {
   display: inline-block;
   padding: 4px 10px;
   border-radius: 20px;
-  background: #faf9f6;
+  background: #fffcf7;
   font-size: 12px;
   font-weight: 700;
 }
@@ -390,21 +390,21 @@ summary:focus-visible {
 }
 
 .card-body > p {
-  color: #65574f;
+  color: #6f5b48;
   font-size: 14px;
 }
 
 .card-note {
   padding-top: 15px;
   border-top: 1px solid var(--line);
-  color: #75645b;
+  color: #796755;
   font-size: 12px;
 }
 
 .pending-program {
   margin-top: 25px;
   padding: 20px 24px;
-  border: 1px dashed #d9c49a;
+  border: 1px dashed #d9c0a0;
   border-radius: 8px;
 }
 
@@ -428,7 +428,7 @@ summary:focus-visible {
 .guide-card {
   padding: 24px;
   border-top: 3px solid var(--green);
-  background: #faf9f6;
+  background: #fffcf7;
 }
 
 .guide-card h3 {
@@ -437,14 +437,14 @@ summary:focus-visible {
 
 .guide-card p {
   margin-bottom: 0;
-  color: #65574f;
+  color: #6f5b48;
   font-size: 14px;
 }
 
 /* 공지와 위치 */
 .info-area {
   padding: 60px 0;
-  background: #f4f0e8;
+  background: #fef3e2;
 }
 
 .info-grid {
@@ -478,12 +478,12 @@ summary:focus-visible {
 
 .notice-item p {
   margin: 12px 0 0;
-  color: #75645b;
+  color: #796755;
   font-size: 13px;
 }
 
 .location-panel {
-  background: #faf9f6;
+  background: #fffcf7;
 }
 
 .location-address {
@@ -492,7 +492,7 @@ summary:focus-visible {
 }
 
 .location-panel > p:not(.eyebrow):not(.location-address) {
-  color: #75645b;
+  color: #796755;
   font-size: 13px;
 }
 
@@ -511,7 +511,7 @@ summary:focus-visible {
 
 .footer-brand span {
   display: block;
-  color: #f4f0e8;
+  color: #fef3e2;
   font-size: 12px;
 }
 
@@ -528,7 +528,7 @@ summary:focus-visible {
   gap: 10px 20px;
   padding-bottom: 13px;
   margin-bottom: 14px;
-  border-bottom: 1px solid #715c52;
+  border-bottom: 1px solid #72543b;
   font-size: 13px;
 }
 
@@ -538,13 +538,13 @@ summary:focus-visible {
 
 .footer-content p {
   margin-bottom: 5px;
-  color: #faf9f6;
+  color: #fffcf7;
   font-size: 12px;
 }
 
 .footer-content .copyright {
   margin-top: 16px;
-  color: #f4dfb4;
+  color: #fce7ca;
 }
 
 .back-top {
@@ -559,7 +559,7 @@ summary:focus-visible {
 }
 
 .festival-footer a:focus-visible {
-  outline-color: #9c6233;
+  outline-color: #a44716;
 }
 
 .resources-list {
@@ -581,9 +581,9 @@ summary:focus-visible {
 
 .resource-item > div { flex: 1 1 240px; min-width: 0; }
 .resource-item h3 { margin: 0 0 4px; font-size: 19px; }
-.resource-item time { color: #75645b; font-size: 13px; }
-.resource-item p { margin: 8px 0 0; color: #65574f; font-size: 14px; }
-#resources-status { color: #65574f; }
+.resource-item time { color: #796755; font-size: 13px; }
+.resource-item p { margin: 8px 0 0; color: #6f5b48; font-size: 14px; }
+#resources-status { color: #6f5b48; }
 
 /* 태블릿과 작은 화면 */
 @media (max-width: 1000px) {
@@ -657,7 +657,7 @@ summary:focus-visible {
 
   .hero {
     background-image:
-      linear-gradient(90deg, rgb(250 249 246 / 40%) 0%, rgb(250 249 246 / 86%) 45%, rgb(250 249 246 / 95%) 100%),
+      linear-gradient(90deg, rgb(255 252 247 / 40%) 0%, rgb(255 252 247 / 86%) 45%, rgb(255 252 247 / 95%) 100%),
       url("사진/배경/KakaoTalk_20261101_101232154.jpg");
   }
 
@@ -724,19 +724,19 @@ summary:focus-visible {
 
 
 /* Quiet neutral surfaces with related warm accents. */
-.top-bar { background:#faf9f6; color:#70675d; border-bottom:1px solid #e8e3da; }
-.schedule-bar { background:white; color:#352e26; border-bottom:1px solid #e8e3da; }
-.schedule-label { color:#8b6b4d; }
-.schedule-inner > div { border-color:#e8e3da; }
-.program-section, .info-area { background:#faf9f6; }
-.cover-craft, .cover-drink, .cover-story { background:white; color:#352e26; border-top:2px solid #c49a6c; }
-.card-cover > span:first-child { color:#8b6b4d; }
-.cover-number { color:#c87836; opacity:.18; }
-.guide-card { background:transparent; border-top:1px solid #c49a6c; }
+.top-bar { background:#fffcf7; color:#796755; border-bottom:1px solid #ece0d1; }
+.schedule-bar { background:white; color:#2a1a0e; border-bottom:1px solid #ece0d1; }
+.schedule-label { color:#92704f; }
+.schedule-inner > div { border-color:#ece0d1; }
+.program-section, .info-area { background:#fffcf7; }
+.cover-craft, .cover-drink, .cover-story { background:white; color:#2a1a0e; border-top:2px solid #d8b58d; }
+.card-cover > span:first-child { color:#92704f; }
+.cover-number { color:#d4621a; opacity:.18; }
+.guide-card { background:transparent; border-top:1px solid #d8b58d; }
 .info-panel, .location-panel { background:white; }
-.badge { background:#f4f0e8; color:#70533c; }
-.card-note { border-top-color:#e8e3da; }
-.quick-number { color:#a1693b; }
-.quick-links a:hover { background:#faf9f6; }
-.button-dark { background:#805331; }
-.button-dark:hover { background:#664125; }
+.badge { background:#fef3e2; color:#745038; }
+.card-note { border-top-color:#ece0d1; }
+.quick-number { color:#a44716; }
+.quick-links a:hover { background:#fffcf7; }
+.button-dark { background:#a44716; }
+.button-dark:hover { background:#823810; }

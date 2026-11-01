@@ -1,23 +1,23 @@
 /* Soft festival UI, adapted to the village's warm neutral palette. */
-.village-layout { --ui-accent:#805331; --ui-soft:#f3ece3; --ui-border:#eae2d8; --ui-shadow:0 7px 24px rgb(78 54 32 / 5%); }
-.village-layout .site-header { position:sticky; top:0; z-index:30; box-shadow:0 2px 12px rgb(40 30 20 / 4%); border-bottom:0; }
+.village-layout { --ui-accent:#a44716; --ui-soft:#fce7ca; --ui-border:#ece0d1; --ui-shadow:0 7px 24px rgb(42 26 14 / 5%); }
+.village-layout .site-header { position:sticky; top:0; z-index:30; box-shadow:0 2px 12px rgb(42 26 14 / 4%); border-bottom:0; }
 .village-layout .header-inner { padding:20px 0; }
 .village-layout .main-nav a { position:relative; font-size:15px; }
 .village-layout .main-nav a::after { content:""; position:absolute; bottom:0; left:0; width:0; height:2px; background:var(--ui-accent); transition:width .2s; }
 .village-layout .main-nav a:hover::after,.village-layout .main-nav a.is-current::after { width:24px; }
-.village-layout .hero { margin:24px auto 0; width:min(1320px,calc(100% - 48px)); border-radius:22px; overflow:hidden; background:#f4f0e8; }
+.village-layout .hero { margin:24px auto 0; width:min(1320px,calc(100% - 48px)); border-radius:22px; overflow:hidden; background:#fef3e2; }
 .village-layout .hero-photo { min-height:540px; }
 .village-layout .hero-inner { min-height:540px; }
-.village-layout .hero-label { display:inline-block; border:1px solid #d7c3ac; background:#fffaf3; padding:6px 13px; border-radius:30px; font-size:11px; letter-spacing:.05em; }
+.village-layout .hero-label { display:inline-block; border:1px solid #e4c39a; background:#fffcf7; padding:6px 13px; border-radius:30px; font-size:11px; letter-spacing:.05em; }
 .village-layout .hero-intro { margin-top:20px; }
 .village-layout .hero h1 { font-weight:900; }
 .village-layout .hero-actions { display:flex; flex-wrap:wrap; gap:12px; align-items:center; }
 .village-layout .button { border-radius:50px; padding:14px 24px; font-size:13px; font-weight:700; border:1px solid var(--ui-accent); transition:background .2s,box-shadow .2s,transform .2s; }
-.village-layout .button-dark { background:var(--ui-accent); color:white; box-shadow:0 5px 12px rgb(128 83 49 / 13%); }
+.village-layout .button-dark { background:var(--ui-accent); color:white; box-shadow:0 5px 12px rgb(164 71 22 / 13%); }
 .village-layout .button-outline { background:transparent; color:var(--ui-accent); }
-.village-layout .button:hover { transform:translateY(-2px); box-shadow:0 7px 15px rgb(128 83 49 / 12%); }
+.village-layout .button:hover { transform:translateY(-2px); box-shadow:0 7px 15px rgb(164 71 22 / 12%); }
 .village-layout .button:focus-visible { outline:2px solid var(--ui-accent); outline-offset:4px; }
-.village-layout .quick-links { position:sticky; top:var(--header-height,95px); z-index:25; background:white; display:flex; justify-content:center; gap:38px; width:100%; padding:0 24px; border:0; box-shadow:0 5px 14px rgb(40 30 20 / 4%); }
+.village-layout .quick-links { position:sticky; top:var(--header-height,95px); z-index:25; background:white; display:flex; justify-content:center; gap:38px; width:100%; padding:0 24px; border:0; box-shadow:0 5px 14px rgb(42 26 14 / 4%); }
 .village-layout .quick-links a,.village-layout .quick-links a:first-child { position:relative; padding:23px 10px; border:0; }
 .village-layout .quick-number,.village-layout .quick-links span:last-child { display:none; }
 .village-layout .quick-links strong { font-size:14px; font-weight:700; }
@@ -28,31 +28,31 @@
 .village-layout #programs { scroll-margin-top:calc(var(--header-height,95px) + 70px); }
 .village-layout #about { padding:90px 0; }
 .village-layout .section-heading h2 { font-weight:900; }
-.village-layout .about-description { background:#faf8f5; border-radius:18px; padding:28px 30px; margin:0; font-size:15px; }
+.village-layout .about-description { background:#fffcf7; border-radius:18px; padding:28px 30px; margin:0; font-size:15px; }
 .village-layout .schedule-bar { width:min(1240px,calc(100% - 80px)); margin:0 auto 80px; border:1px solid var(--ui-border); border-radius:18px; background:#fff; box-shadow:var(--ui-shadow); }
 .village-layout .schedule-inner { width:100%; padding:28px 30px; }
-.village-layout .program-section { background:#faf8f4; }
+.village-layout .program-section { background:#fffcf7; }
 .village-layout .program-section>.section { padding-top:80px; }
 .village-layout .program-section .section-heading { text-align:center; margin-bottom:25px; }
 .program-filters { justify-content:center; margin:28px 0 45px; gap:12px; }
-.program-filters button { border:1px solid #e5dbce; padding:12px 24px; background:white; font-weight:700; transition:background .2s,box-shadow .2s; }
-.program-filters button.active { background:var(--ui-accent); border-color:var(--ui-accent); box-shadow:0 4px 10px rgb(128 83 49 / 12%); }
-.program-filters button:hover:not(.active) { background:var(--ui-soft); border-color:#cbb79e; }
+.program-filters button { border:1px solid #e7d6c0; padding:12px 24px; background:white; font-weight:700; transition:background .2s,box-shadow .2s; }
+.program-filters button.active { background:var(--ui-accent); border-color:var(--ui-accent); box-shadow:0 4px 10px rgb(164 71 22 / 12%); }
+.program-filters button:hover:not(.active) { background:var(--ui-soft); border-color:#d9b68e; }
 .village-layout .program-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; align-items:stretch; }
-.village-layout .program-card { display:flex; flex-direction:column; padding:28px; gap:24px; border:1px solid #ede6dd; border-radius:18px; background:white; box-shadow:var(--ui-shadow); }
+.village-layout .program-card { display:flex; flex-direction:column; padding:28px; gap:24px; border:1px solid #eee3d5; border-radius:18px; background:white; box-shadow:var(--ui-shadow); }
 .village-layout .program-card[hidden] { display:none; }
 .village-layout .card-cover { position:relative; padding:0 0 22px; border-bottom:1px solid var(--ui-border); }
 .village-layout .card-cover strong { font-size:28px; padding-right:34px; }
 .village-layout .cover-number { position:absolute; right:0; top:0; margin:0; display:grid; place-items:center; width:36px; height:36px; border-radius:12px; background:var(--ui-soft); color:var(--ui-accent); font-size:12px; font-weight:800; }
 .village-layout .card-body { display:flex; flex-direction:column; flex:1; gap:0; }
-.village-layout .badge { align-self:flex-start; padding:5px 10px; border-radius:30px; background:#f5efe7; color:#805331; font-size:10px; }
+.village-layout .badge { align-self:flex-start; padding:5px 10px; border-radius:30px; background:#fcebd4; color:#a44716; font-size:10px; }
 .village-layout .card-body h3 { font-size:19px; margin:15px 0 12px; }
 .village-layout .card-body>p { font-size:14px; line-height:1.85; margin:0 0 24px; }
-.village-layout .card-note { margin-top:auto; padding:18px 0 0; border:0; border-top:1px dashed #e4dbcf; font-size:11px; line-height:1.9; }
-.village-layout .pending-program { padding:20px 24px; margin-top:25px; border:1px solid var(--ui-border); border-radius:14px; background:#f4efe8; }
+.village-layout .card-note { margin-top:auto; padding:18px 0 0; border:0; border-top:1px dashed #ece0d1; font-size:11px; line-height:1.9; }
+.village-layout .pending-program { padding:20px 24px; margin-top:25px; border:1px solid var(--ui-border); border-radius:14px; background:#fef3e2; }
 .village-layout .guide-card { background:#fff; padding:26px; border:1px solid var(--ui-border); border-radius:16px; box-shadow:var(--ui-shadow); }
 .village-layout .guide-card h3 { font-size:19px; margin-bottom:18px; }
-.village-layout .guide-card h3::before { content:""; display:block; width:26px; height:4px; border-radius:4px; background:#b28b62; margin-bottom:22px; }
+.village-layout .guide-card h3::before { content:""; display:block; width:26px; height:4px; border-radius:4px; background:#d4621a; margin-bottom:22px; }
 .village-layout .info-panel { background:white; padding:32px; border:1px solid var(--ui-border); border-radius:18px; box-shadow:var(--ui-shadow); scroll-margin-top:calc(var(--header-height,95px) + 80px); }
 .village-layout .info-grid { gap:28px; }
 .village-layout .notice-item { border-color:var(--ui-border); }

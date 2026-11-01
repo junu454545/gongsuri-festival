@@ -38,6 +38,11 @@
     .resources-more, .plus-icon { display:inline-grid; place-items:center; flex:0 0 48px; width:48px; height:48px; padding:0; border:0; border-radius:0; background:transparent; color:#493426; box-shadow:none; text-decoration:none; font-size:32px; font-weight:400; line-height:1; }
     .resources-more:hover, .plus-icon:hover { background:transparent; color:#81624c; }
     .resources-more:focus-visible { outline:3px solid #81624c; outline-offset:4px; }
+  .about-title-row { display:flex; align-items:center; gap:16px; }
+    .about-title-row h2 { margin:0; }
+    .about-title-row .plus-icon { display:inline-grid; place-items:center; flex:0 0 40px; width:40px; height:48px; padding:0; border:0; border-radius:0; background:transparent; color:#493426; box-shadow:none; text-decoration:none; font-size:32px; font-weight:400; line-height:1; }
+    .about-title-row .plus-icon:hover { color:#81624c; background:transparent; }
+    .about-title-row .plus-icon:focus-visible { outline:3px solid #81624c; outline-offset:4px; }
   </style>
   <link rel="stylesheet" href="main-hero.css?v=20261101">
 </head>
@@ -125,7 +130,7 @@
     <section id="about" class="section container">
       <div class="section-heading">
         <p class="eyebrow">공수리 이야기</p>
-        <h2>우리 마을의 가을에<br>당신을 초대합니다.</h2>
+        <div class="about-title-row"><h2>우리 마을의 가을에<br>당신을 초대합니다.</h2><a class="plus-icon" href="about.html" aria-label="공수리 마을과 축제 소개 더 보기">+</a></div>
       </div>
 
       <p class="about-description">

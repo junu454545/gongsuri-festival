@@ -64,7 +64,7 @@
       .nav-submenu { left:0; min-width:220px; top:100%; }
       .village-layout .main-nav .nav-submenu a { padding:13px 18px; font-size:13px; }
     }
-.archive-menu{list-style:none;padding:0;margin:20px 0 0;max-width:520px;border-top:1px solid #e7ddd5}.archive-menu li{border-bottom:1px solid #e7ddd5}.archive-menu a{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 4px;color:#493426;text-decoration:none;font-size:15px}.archive-menu a:hover{color:#81624c;background:#faf8f6}.archive-menu a:focus-visible{outline:2px solid #81624c;outline-offset:3px}</style>
+.archive-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:28px}.archive-column{min-width:0}.archive-column-heading{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;border-bottom:2px solid #c6ac98}.archive-column-heading h3{margin:0;font-size:19px}.archive-column-heading>a{padding:0 8px;color:#81624c;font-size:25px;text-decoration:none}.archive-recent{list-style:none;margin:0;padding:0}.archive-recent li{border-bottom:1px solid #eee8e3}.archive-recent li>a{display:block;padding:15px 0;text-decoration:none;color:#493426}.archive-recent strong{display:block;font-size:14px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.archive-recent time{display:block;font-size:12px;color:#796755;margin-top:5px}.archive-recent a:hover strong{text-decoration:underline}.archive-placeholder{padding:20px 0;color:#796755;font-size:13px}@media(max-width:700px){.archive-columns{grid-template-columns:1fr;gap:28px}}</style>
   <link rel="stylesheet" href="main-hero.css?v=20261101">
 </head>
 
@@ -369,11 +369,9 @@
         <div class="resources-title-row"><h2 id="resources-title">축제 자료실</h2></div>
         <p>축제의 소식과 사진, 기록을 만나보세요.</p>
       </div>
-      <ul class="archive-menu" aria-label="자료실 목록">
-        <li><a href="board.html#press"><span>보도자료</span><span aria-hidden="true">↗</span></a></li>
-        <li><a href="board.html#photos"><span>사진</span><span aria-hidden="true">↗</span></a></li>
-        <li><a href="board.html#statistics"><span>통계</span><span aria-hidden="true">↗</span></a></li>
-      </ul>
+      <div class="archive-columns"><section class="archive-column" aria-labelledby="recent-press-title"><div class="archive-column-heading"><h3 id="recent-press-title">보도자료</h3><a href="board.html#press" aria-label="보도자료 전체 보기">+</a></div><ul id="recent-press" class="archive-recent"><li class="archive-placeholder">자료를 불러오고 있습니다.</li></ul></section>
+<section class="archive-column" aria-labelledby="recent-photos-title"><div class="archive-column-heading"><h3 id="recent-photos-title">사진</h3><a href="board.html#photos" aria-label="사진 전체 보기">+</a></div><ul id="recent-photos" class="archive-recent"><li class="archive-placeholder">자료를 불러오고 있습니다.</li></ul></section>
+<section class="archive-column" aria-labelledby="recent-statistics-title"><div class="archive-column-heading"><h3 id="recent-statistics-title">통계</h3><a href="board.html#statistics" aria-label="통계 전체 보기">+</a></div><ul id="recent-statistics" class="archive-recent"><li class="archive-placeholder">자료를 불러오고 있습니다.</li></ul></section></div>
     </section>
   </main>
 
@@ -430,5 +428,6 @@
       });
     })();
   </script>
+<script src="archive-preview.js?v=20261101" defer></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ function video(value){try{const u=new URL(value),host=u.hostname.replace(/^www\.
 function render(items,key){const list=document.getElementById(key+'-list');list.replaceChildren();if(!items.length){list.append(el('p','아직 등록된 '+labels[key]+' 게시물이 없습니다.','empty'));return;}
 let previousYear=null;
 items.forEach(item=>{if(!item||typeof item!=='object')return;
-if(key==='press'){
+if(key==='press'||key==='photos'){
  const year=String(item.year||'공통');
  if(year!==previousYear){
   const heading=el('h3',year==='공통'?'연도 공통 자료':year+'년 자료','press-year-heading');

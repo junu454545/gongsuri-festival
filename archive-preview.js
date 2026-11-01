@@ -1,6 +1,6 @@
 'use strict';
 (async()=>{
- const keys=['press','photos','statistics'];
+ const keys=['notices','press','photos','statistics'];
  try{
   const response=await fetch('board.json',{cache:'no-cache'});
   if(!response.ok)throw Error('load');
@@ -8,10 +8,10 @@
   for(const key of keys){
    const list=document.getElementById('recent-'+key);
    const items=(Array.isArray(data[key])?data[key]:[]).filter(item=>item&&typeof item==='object');
-   const dated=items.map((item,index)=>({item,index,date:String(item.date||'').match(/\b20\d{2}[.-]\d{2}(?:[.-]\d{2})?/)?.[0].replaceAll('.','-')||''}));
-   dated.sort((a,b)=>b.date.localeCompare(a.date)||a.index-b.index);
+   const dated=items.map((item,index)=>({item,index,date:String(item.date||item.registeredAt||'').match(/\b20\d{2}[.-]\d{2}(?:[.-]\d{2})?/)?.[0].replaceAll('.','-')||''}));
+   dated.sort((a,b)=>b.date.localeCompare(a.date)||b.index-a.index);
    list.replaceChildren();
-   for(const {item,date} of dated.slice(0,4)){
+   for(const {item,date} of dated.slice(0,3)){
     const row=document.createElement('li'),link=document.createElement('a'),title=document.createElement('strong');
     link.href='board.html#'+key;title.textContent=item.title||item.caption||'축제 기록';link.append(title);
     if(date){const time=document.createElement('time');time.dateTime=date;time.textContent=date.replaceAll('-','.');link.append(time);}

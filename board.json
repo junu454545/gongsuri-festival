@@ -755,6 +755,20 @@
       "url": "사진/KakaoTalk_20261101_142325500_03.jpg",
       "registeredAt": "2026-11-01",
       "year": "2026"
+    },
+    {
+      "year": "2026",
+      "title": "2026년 축제 영상 1",
+      "video": "사진/KakaoTalk_20261101_101844966.mp4",
+      "url": "사진/KakaoTalk_20261101_101844966.mp4",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "year": "2026",
+      "title": "2026년 축제 영상 2",
+      "video": "사진/KakaoTalk_20261101_142056665.mp4",
+      "url": "사진/KakaoTalk_20261101_142056665.mp4",
+      "registeredAt": "2026-11-01"
     }
   ],
   "statistics": [],

@@ -20,7 +20,8 @@ if(key==='press'||key==='photos'){
 }
 if(key==='photos'){
  const card=el('figure',undefined,'card');
- if(safe(item.image)){const link=el('a',undefined,'archive-image');link.href=safe(item.image);link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',(item.year||'')+'년 축제 사진 원본 보기');const img=el('img');img.src=safe(item.image);img.alt=item.title||'축제 사진';img.loading='lazy';link.append(img);card.append(link);}
+ if(safe(item.video)){const player=el('video');player.src=safe(item.video);player.controls=true;player.preload='metadata';player.playsInline=true;player.setAttribute('aria-label',item.title||'축제 영상');const fallback=el('a','영상 열기');fallback.href=safe(item.video);player.append(fallback);card.append(player);}
+ else if(safe(item.image)){const link=el('a',undefined,'archive-image');link.href=safe(item.image);link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',(item.year||'')+'년 축제 사진 원본 보기');const img=el('img');img.src=safe(item.image);img.alt=item.title||'축제 사진';img.loading='lazy';link.append(img);card.append(link);}
  list.append(card);return;
 }
 const card=el(key==='photos'?'figure':'article',undefined,'card'),id=key==='press'?video(item.url):null;

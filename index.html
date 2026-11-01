@@ -33,6 +33,11 @@
       .village-layout .festival-location { grid-template-columns:1fr; gap:28px; }
       .location-map iframe { height:340px; }
     }
+  .resources-title-row { display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .resources-title-row h2 { margin:0; }
+    .resources-more { display:grid; place-items:center; flex:0 0 48px; width:48px; height:48px; border:1px solid #e7ddd5; border-radius:50%; color:#81624c; text-decoration:none; font-size:32px; line-height:1; }
+    .resources-more:hover { background:#f6f1ed; }
+    .resources-more:focus-visible { outline:3px solid #81624c; outline-offset:4px; }
   </style>
 </head>
 
@@ -322,7 +327,7 @@
     <section id="resources" class="section container" aria-labelledby="resources-title">
       <div class="section-heading">
         <p class="eyebrow">DOWNLOADS</p>
-        <h2 id="resources-title">축제 자료실</h2>
+        <div class="resources-title-row"><h2 id="resources-title">축제 자료실</h2><a class="resources-more" href="board.html" aria-label="축제 자료실 게시판 더 보기">+</a></div>
         <p>축제 안내문과 행사 자료를 확인하고 내려받으세요.</p>
       </div>
       <p id="resources-status" role="status">자료를 불러오고 있습니다.</p>

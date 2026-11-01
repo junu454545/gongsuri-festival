@@ -594,7 +594,242 @@
       ]
     }
   ],
-  "photos": [],
+  "photos": [
+    {
+      "title": "축제 사진 01",
+      "image": "사진/KakaoTalk_20261031_011903751_13.jpg",
+      "url": "사진/KakaoTalk_20261031_011903751_13.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 02",
+      "image": "사진/KakaoTalk_20261031_011903751_17.jpg",
+      "url": "사진/KakaoTalk_20261031_011903751_17.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 03",
+      "image": "사진/KakaoTalk_20261031_011903751_25.jpg",
+      "url": "사진/KakaoTalk_20261031_011903751_25.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 04",
+      "image": "사진/KakaoTalk_20261031_095138771_04.jpg",
+      "url": "사진/KakaoTalk_20261031_095138771_04.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 05",
+      "image": "사진/KakaoTalk_20261031_095138771_05.jpg",
+      "url": "사진/KakaoTalk_20261031_095138771_05.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 06",
+      "image": "사진/KakaoTalk_20261031_185414038.jpg",
+      "url": "사진/KakaoTalk_20261031_185414038.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 07",
+      "image": "사진/KakaoTalk_20261031_185414038_01.jpg",
+      "url": "사진/KakaoTalk_20261031_185414038_01.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 08",
+      "image": "사진/KakaoTalk_20261031_185414038_02.jpg",
+      "url": "사진/KakaoTalk_20261031_185414038_02.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 09",
+      "image": "사진/KakaoTalk_20261101_101848873_02.jpg",
+      "url": "사진/KakaoTalk_20261101_101848873_02.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 10",
+      "image": "사진/KakaoTalk_20261101_101848873_03.jpg",
+      "url": "사진/KakaoTalk_20261101_101848873_03.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 11",
+      "image": "사진/KakaoTalk_20261101_101848873_04.jpg",
+      "url": "사진/KakaoTalk_20261101_101848873_04.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 12",
+      "image": "사진/KakaoTalk_20261101_101848873_06.jpg",
+      "url": "사진/KakaoTalk_20261101_101848873_06.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 13",
+      "image": "사진/KakaoTalk_20261101_101848873_07.jpg",
+      "url": "사진/KakaoTalk_20261101_101848873_07.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 14",
+      "image": "사진/KakaoTalk_20261101_101848873_08.jpg",
+      "url": "사진/KakaoTalk_20261101_101848873_08.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 15",
+      "image": "사진/KakaoTalk_20261101_101848873_09.jpg",
+      "url": "사진/KakaoTalk_20261101_101848873_09.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 16",
+      "image": "사진/KakaoTalk_20261101_101930721.jpg",
+      "url": "사진/KakaoTalk_20261101_101930721.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 17",
+      "image": "사진/KakaoTalk_20261101_101930721_01.jpg",
+      "url": "사진/KakaoTalk_20261101_101930721_01.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 18",
+      "image": "사진/KakaoTalk_20261101_101930721_02.jpg",
+      "url": "사진/KakaoTalk_20261101_101930721_02.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 19",
+      "image": "사진/KakaoTalk_20261101_101930721_03.jpg",
+      "url": "사진/KakaoTalk_20261101_101930721_03.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 20",
+      "image": "사진/KakaoTalk_20261101_114339029.jpg",
+      "url": "사진/KakaoTalk_20261101_114339029.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 21",
+      "image": "사진/KakaoTalk_20261101_142325500_01.jpg",
+      "url": "사진/KakaoTalk_20261101_142325500_01.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 22",
+      "image": "사진/KakaoTalk_20261101_142325500_02.jpg",
+      "url": "사진/KakaoTalk_20261101_142325500_02.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 사진 23",
+      "image": "사진/KakaoTalk_20261101_142325500_03.jpg",
+      "url": "사진/KakaoTalk_20261101_142325500_03.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "공수리 풍경 24",
+      "image": "사진/배경/KakaoTalk_20261101_101232154.jpg",
+      "url": "사진/배경/KakaoTalk_20261101_101232154.jpg",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "공수리 풍경 25",
+      "image": "사진/배경/파로호 호숫가 막걸리 축제.png",
+      "url": "사진/배경/파로호 호숫가 막걸리 축제.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 26",
+      "image": "사진/부스/KakaoTalk_20261031_164255578.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 27",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_01.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_01.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 28",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_02.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_02.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 29",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_03.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_03.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 30",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_04.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_04.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 31",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_05.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_05.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 32",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_06.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_06.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 33",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_07.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_07.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 34",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_08.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_08.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 35",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_09.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_09.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 36",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_10.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_10.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 37",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_11.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_11.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 38",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_12.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_12.png",
+      "registeredAt": "2026-11-01"
+    },
+    {
+      "title": "축제 부스 사진 39",
+      "image": "사진/부스/KakaoTalk_20261031_164255578_13.png",
+      "url": "사진/부스/KakaoTalk_20261031_164255578_13.png",
+      "registeredAt": "2026-11-01"
+    }
+  ],
   "statistics": [],
   "notices": []
 }

@@ -43,7 +43,28 @@
     .about-title-row .plus-icon { display:inline-grid; place-items:center; flex:0 0 40px; width:40px; height:48px; padding:0; border:0; border-radius:0; background:transparent; color:#493426; box-shadow:none; text-decoration:none; font-size:32px; font-weight:400; line-height:1; }
     .about-title-row .plus-icon:hover { color:#81624c; background:transparent; }
     .about-title-row .plus-icon:focus-visible { outline:3px solid #81624c; outline-offset:4px; }
-  </style>
+  
+    /* Dropdown navigation for introduction and archive pages. */
+    .village-layout .main-nav { align-items:center; overflow:visible; }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown summary { position:relative; padding:10px 0; list-style:none; cursor:pointer; font-size:15px; font-weight:700; line-height:1.7; white-space:nowrap; }
+    .nav-dropdown summary::-webkit-details-marker { display:none; }
+    .nav-dropdown summary::after { content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:#c6ac98; transform:scaleX(0); transition:transform .2s; }
+    .nav-dropdown[open] summary,.nav-dropdown summary:hover { color:#81624c; }
+    .nav-dropdown[open] summary::after { transform:scaleX(1); }
+    .nav-submenu { position:absolute; left:-22px; top:calc(100% + 12px); z-index:60; min-width:248px; padding:18px 0; border:1px solid #eee8e3; background:#fff; box-shadow:0 12px 28px rgb(42 26 14 / 10%); }
+    .village-layout .main-nav .nav-submenu a { display:block; padding:14px 22px; font-size:14px; font-weight:400; white-space:nowrap; color:#2a1a0e; }
+    .village-layout .main-nav .nav-submenu a::after { display:none; }
+    .village-layout .main-nav .nav-submenu a:hover { background:#f6f1ed; color:#81624c; }
+    .nav-dropdown summary:focus-visible,.nav-submenu a:focus-visible { outline:2px solid #81624c; outline-offset:3px; }
+    .nav-dropdown:last-child .nav-submenu { left:auto; right:0; }
+    @media(max-width:650px) {
+      .village-layout .main-nav { overflow:visible; flex-wrap:wrap; gap:6px 17px; }
+      .nav-dropdown summary { font-size:12px; }
+      .nav-submenu { left:0; min-width:220px; top:100%; }
+      .village-layout .main-nav .nav-submenu a { padding:13px 18px; font-size:13px; }
+    }
+</style>
   <link rel="stylesheet" href="main-hero.css?v=20261101">
 </head>
 
@@ -67,11 +88,26 @@
       </a>
 
       <nav class="main-nav" aria-label="주요 메뉴">
-        <a href="#about">축제 소개</a>
+        <details class="nav-dropdown">
+          <summary>축제 소개</summary>
+          <div class="nav-submenu">
+            <a href="about.html#village">공수리 마을 소개</a>
+            <a href="about.html#festival-story">축제 배경 이야기</a>
+            <a href="about.html#festival-history">공수리마을 축제 역사</a>
+            <a href="about.html#greeting">이장님의 말씀</a>
+          </div>
+        </details>
         <a href="#programs">체험 프로그램</a>
         <a href="#guide">이용 안내</a>
         <a href="#location">오시는 길</a>
-        <a href="#resources">자료실</a>
+        <details class="nav-dropdown">
+          <summary>자료실</summary>
+          <div class="nav-submenu">
+            <a href="board.html#press">보도 자료</a>
+            <a href="board.html#photos">축제 사진</a>
+            <a href="board.html#statistics">통계</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
@@ -130,7 +166,7 @@
     <section id="about" class="section container">
       <div class="section-heading">
         <p class="eyebrow">공수리 이야기</p>
-        <div class="about-title-row"><h2>우리 마을의 가을에<br>당신을 초대합니다.</h2><a class="plus-icon" href="about.html" aria-label="공수리 마을과 축제 소개 더 보기">+</a></div>
+        <div class="about-title-row"><h2>우리 마을의 가을에<br>당신을 초대합니다.</h2></div>
       </div>
 
       <p class="about-description">
@@ -330,7 +366,7 @@
     <section id="resources" class="section container" aria-labelledby="resources-title">
       <div class="section-heading">
         <p class="eyebrow">DOWNLOADS</p>
-        <div class="resources-title-row"><h2 id="resources-title">축제 자료실</h2><a class="resources-more" href="board.html" aria-label="축제 자료실 게시판 더 보기">+</a></div>
+        <div class="resources-title-row"><h2 id="resources-title">축제 자료실</h2></div>
         <p>축제 안내문과 행사 자료를 확인하고 내려받으세요.</p>
       </div>
       <p id="resources-status" role="status">자료를 불러오고 있습니다.</p>
@@ -373,5 +409,25 @@
   <script src="resources.js" defer></script>
   <script src="layout.js?v=20261101-soft"></script>
   <script src="booths.js?v=20261101"></script>
+
+  <script>
+    (() => {
+      const menus = [...document.querySelectorAll('.nav-dropdown')];
+      menus.forEach(menu => {
+        menu.addEventListener('toggle', () => {
+          if (menu.open) menus.forEach(other => { if (other !== menu) other.open = false; });
+        });
+        menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => { menu.open = false; }));
+      });
+      document.addEventListener('click', event => {
+        menus.forEach(menu => { if (!menu.contains(event.target)) menu.open = false; });
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') menus.forEach(menu => {
+          if (menu.open) { menu.open = false; menu.querySelector('summary').focus(); }
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

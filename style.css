@@ -1,11 +1,11 @@
 /* 공통 색상 */
 :root {
-  --cream: #fffbed;
+  --cream: #fcf9f7;
   --paper: #ffffff;
   --ink: #392d2b;
   --orange: #9b3838;
   --green: #813d3d;
-  --line: #e4d8cd;
+  --line: #e5d8d3;
   --navy: #392d2b;
 }
 
@@ -127,9 +127,9 @@ summary:focus-visible {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background-color: #fff6a9;
+  background-color: #f5e8e4;
   background-image:
-    linear-gradient(90deg, rgb(255 251 237 / 8%) 0%, rgb(255 251 237 / 12%) 40%, rgb(255 251 237 / 88%) 72%, rgb(255 251 237 / 96%) 100%),
+    linear-gradient(90deg, rgb(252 249 247 / 8%) 0%, rgb(252 249 247 / 12%) 40%, rgb(252 249 247 / 88%) 72%, rgb(252 249 247 / 96%) 100%),
     url("사진/배경/KakaoTalk_20261101_101232154.jpg");
   background-size: cover;
   background-position: 75% center;
@@ -214,7 +214,7 @@ summary:focus-visible {
 
 .schedule-inner > div {
   padding-left: 20px;
-  border-left: 1px solid rgb(255 251 237 / 30%);
+  border-left: 1px solid rgb(252 249 247 / 30%);
 }
 
 .schedule-label {
@@ -356,18 +356,18 @@ summary:focus-visible {
 }
 
 .cover-craft {
-  background: #b4e4d6;
-  color: #284f45;
+  background: #f5e8e4;
+  color: #743f3f;
 }
 
 .cover-drink {
-  background: #ffca88;
-  color: #604321;
+  background: #f5e8e4;
+  color: #743f3f;
 }
 
 .cover-story {
   background: #de7272;
-  color: #392020;
+  color: #743f3f;
 }
 
 .card-body {
@@ -378,7 +378,7 @@ summary:focus-visible {
   display: inline-block;
   padding: 4px 10px;
   border-radius: 20px;
-  background: #fffbed;
+  background: #fcf9f7;
   font-size: 12px;
   font-weight: 700;
 }
@@ -404,7 +404,7 @@ summary:focus-visible {
 .pending-program {
   margin-top: 25px;
   padding: 20px 24px;
-  border: 1px dashed #ccbba7;
+  border: 1px dashed #d8c4bd;
   border-radius: 8px;
 }
 
@@ -428,7 +428,7 @@ summary:focus-visible {
 .guide-card {
   padding: 24px;
   border-top: 3px solid var(--green);
-  background: #fffbed;
+  background: #fcf9f7;
 }
 
 .guide-card h3 {
@@ -444,7 +444,7 @@ summary:focus-visible {
 /* 공지와 위치 */
 .info-area {
   padding: 60px 0;
-  background: #ffca88;
+  background: #f5e8e4;
 }
 
 .info-grid {
@@ -483,7 +483,7 @@ summary:focus-visible {
 }
 
 .location-panel {
-  background: #fffbed;
+  background: #fcf9f7;
 }
 
 .location-address {
@@ -511,7 +511,7 @@ summary:focus-visible {
 
 .footer-brand span {
   display: block;
-  color: #ffca88;
+  color: #f5e8e4;
   font-size: 12px;
 }
 
@@ -538,13 +538,13 @@ summary:focus-visible {
 
 .footer-content p {
   margin-bottom: 5px;
-  color: #fffbed;
+  color: #fcf9f7;
   font-size: 12px;
 }
 
 .footer-content .copyright {
   margin-top: 16px;
-  color: #e7d5bd;
+  color: #e6d6d0;
 }
 
 .back-top {
@@ -657,7 +657,7 @@ summary:focus-visible {
 
   .hero {
     background-image:
-      linear-gradient(90deg, rgb(255 251 237 / 40%) 0%, rgb(255 251 237 / 86%) 45%, rgb(255 251 237 / 95%) 100%),
+      linear-gradient(90deg, rgb(252 249 247 / 40%) 0%, rgb(252 249 247 / 86%) 45%, rgb(252 249 247 / 95%) 100%),
       url("사진/배경/KakaoTalk_20261101_101232154.jpg");
   }
 
@@ -723,12 +723,18 @@ summary:focus-visible {
 }
 
 /* Reference palette surfaces; dark text preserves legibility. */
-.top-bar { background:#DE7272; color:#392d2b; }
-.schedule-bar { background:#B4E4D6; color:#28453c; }
-.schedule-label { color:#36584e; }
-.schedule-inner > div { border-color:#83b5a5; }
-.program-section { background:#fffbed; }
-.guide-card { background:#FFF6A9; }
-.info-area { background:#fff5e6; }
-.location-panel { background:#FFCA88; }
-.badge { background:#fff6a9; color:#392d2b; }
+.top-bar { background:#de7272; color:#392d2b; }
+.schedule-bar { background:#f5e8e4; color:#392d2b; }
+.schedule-label { color:#743f3f; }
+.schedule-inner > div { border-color:#dfc7c1; }
+.program-section { background:#fcf9f7; }
+.guide-card { background:#f5e8e4; }
+.info-area { background:#fcf9f7; }
+.location-panel { background:#f5e8e4; }
+.badge { background:#f5e8e4; color:#392d2b; }
+
+/* One coral accent with neutral surfaces. */
+.top-bar { background:#f5e8e4; }
+.schedule-bar { background:#f5e8e4; }
+.cover-craft, .cover-drink, .cover-story { background:#f5e8e4; color:#743f3f; border-top:3px solid #DE7272; }
+.guide-card { background:#fcf9f7; }

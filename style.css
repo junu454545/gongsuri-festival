@@ -724,7 +724,7 @@ summary:focus-visible {
 
 
 /* Quiet neutral surfaces with related warm accents. */
-.top-bar { background:#805331; color:#ffffff; border-bottom:1px solid #805331; }
+.top-bar { background:#faf9f6; color:#70675d; border-bottom:1px solid #e8e3da; }
 .schedule-bar { background:white; color:#352e26; border-bottom:1px solid #e8e3da; }
 .schedule-label { color:#8b6b4d; }
 .schedule-inner > div { border-color:#e8e3da; }

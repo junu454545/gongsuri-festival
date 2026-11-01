@@ -64,7 +64,45 @@
       .nav-submenu { left:0; min-width:220px; top:100%; }
       .village-layout .main-nav .nav-submenu a { padding:13px 18px; font-size:13px; }
     }
-.archive-menu{list-style:none;padding:0;margin:20px 0 0;max-width:520px;border-top:1px solid #e7ddd5}.archive-menu li{border-bottom:1px solid #e7ddd5}.archive-menu a{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 4px;color:#493426;text-decoration:none;font-size:15px}.archive-menu a:hover{color:#81624c;background:#faf8f6}.archive-menu a:focus-visible{outline:2px solid #81624c;outline-offset:3px}</style>
+.archive-menu{list-style:none;padding:0;margin:20px 0 0;max-width:520px;border-top:1px solid #e7ddd5}.archive-menu li{border-bottom:1px solid #e7ddd5}.archive-menu a{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 4px;color:#493426;text-decoration:none;font-size:15px}.archive-menu a:hover{color:#81624c;background:#faf8f6}.archive-menu a:focus-visible{outline:2px solid #81624c;outline-offset:3px}
+    /* Poster and introduction below the main visual. */
+    .village-layout #about.festival-overview { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); align-items:center; gap:48px; padding:72px 0; }
+    .festival-poster { margin:0; min-width:0; }
+    .festival-poster a { display:block; border-radius:20px; overflow:hidden; box-shadow:0 12px 40px rgb(42 26 14 / 10%); }
+    .festival-poster img { display:block; width:100%; height:auto; }
+    .festival-overview-copy { min-width:0; }
+    .overview-label { display:inline-block; margin:0 0 16px; padding:7px 16px; border-radius:30px; background:#fff0f0; color:#bd3b46; font-size:13px; font-weight:700; letter-spacing:.03em; }
+    .festival-overview h2 { margin:0; font-size:clamp(25px,2.65vw,39px); font-weight:900; letter-spacing:-.055em; line-height:1.4; }
+    .festival-overview h2 span { color:#cf3c4b; background:linear-gradient(transparent 76%,#fff1d7 76%); }
+    .overview-lead { margin:20px 0 26px; color:#796755; font-size:16px; line-height:1.8; }
+    .overview-features { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .overview-feature { min-width:0; padding:24px 20px; border:1px solid #f1dedb; border-radius:18px; background:#fff; }
+    .overview-icon { display:grid; place-items:center; width:46px; height:46px; margin-bottom:16px; border-radius:14px; background:#fff0f0; color:#cf3c4b; font-size:25px; }
+    .overview-feature h3 { margin:0 0 10px; font-size:18px; line-height:1.5; }
+    .overview-feature p { margin:0; color:#796755; font-size:13px; line-height:1.9; }
+    .overview-message { margin-top:22px; padding:22px; border:1px solid #f5e6e1; border-radius:20px; background:#fffaf8; }
+    .overview-message p { margin:0; color:#796755; font-size:14px; line-height:1.9; }
+    .overview-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+    .overview-button { display:inline-flex; align-items:center; justify-content:center; gap:18px; padding:14px 24px; border:1px solid #cf3c4b; border-radius:40px; font-weight:700; font-size:14px; text-decoration:none; }
+    .overview-primary { background:#cf3c4b; color:white; box-shadow:0 6px 16px rgb(207 60 75 / 16%); }
+    .overview-secondary { background:white; color:#bd3b46; }
+    .overview-button:hover { filter:brightness(.95); }
+    .overview-button:focus-visible,.festival-poster a:focus-visible { outline:3px solid #81624c; outline-offset:4px; }
+    @media(max-width:950px) {
+      .village-layout #about.festival-overview { gap:28px; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); }
+      .overview-feature { padding:18px 14px; }
+      .overview-feature p br { display:none; }
+      .overview-button { padding:12px 18px; font-size:13px; }
+    }
+    @media(max-width:700px) {
+      .village-layout #about.festival-overview { grid-template-columns:1fr; padding:48px 0; gap:32px; }
+      .festival-poster { width:min(100%,460px); margin:0 auto; }
+      .festival-overview h2 { font-size:clamp(25px,6.5vw,34px); }
+      .overview-feature h3 { font-size:16px; }
+      .overview-message p br { display:none; }
+      .overview-actions { gap:10px; }
+    }
+</style>
   <link rel="stylesheet" href="main-hero.css?v=20261101">
 </head>
 
@@ -164,18 +202,36 @@
     </nav>
 
     <!-- 소개 -->
-    <section id="about" class="section container">
-      <div class="section-heading">
-        <p class="eyebrow">공수리 이야기</p>
-        <div class="about-title-row"><h2>우리 마을의 가을에<br>당신을 초대합니다.</h2></div>
+    <section id="about" class="section container festival-overview" aria-labelledby="overview-title">
+      <figure class="festival-poster">
+        <a href="assets/about/festival-poster-2026.jpg" target="_blank" rel="noopener noreferrer" aria-label="2026 주막할매축제 포스터 원본 크게 보기">
+          <img src="assets/about/festival-poster-2026.jpg" width="585" height="733" loading="lazy" alt="2026 양구 공수리 주막할매축제 포스터. 10월 10일 토요일 11시부터 17시까지 공수대교 일원. 체험 참여와 엽전 지급, 경품 응모, 셔틀버스 운행 및 국밥 무료 나눔 안내.">
+        </a>
+      </figure>
+      <div class="festival-overview-copy">
+        <p class="overview-label">2026 공수리마을 주막할매축제</p>
+        <h2 id="overview-title">공수리에서 나누는 따뜻한 정<br><span>주막할매의 마음으로 만나요!</span></h2>
+        <p class="overview-lead">파로호의 가을 풍경 속에서 함께 즐기는 마을 잔치</p>
+        <div class="overview-features">
+          <article class="overview-feature">
+            <span class="overview-icon" aria-hidden="true">★</span>
+            <h3>다양한 즐길거리</h3>
+            <p>만들기 체험과 전통놀이를 즐기고<br>엽전으로 경품 응모까지!</p>
+          </article>
+          <article class="overview-feature">
+            <span class="overview-icon" aria-hidden="true">♡</span>
+            <h3>정겨운 나눔</h3>
+            <p>주막할매의 마음을 이어가는<br>마을 먹거리와 국밥 나눔</p>
+          </article>
+        </div>
+        <div class="overview-message">
+          <p>주민들이 함께 준비한 체험과 먹거리, 공수리의 이야기가 기다립니다.<br>가족과 이웃, 친구들과 함께 따뜻한 가을의 추억을 만들어보세요.</p>
+        </div>
+        <div class="overview-actions">
+          <a class="overview-button overview-primary" href="#programs">프로그램 보기 <span aria-hidden="true">→</span></a>
+          <a class="overview-button overview-secondary" href="https://www.youtube.com/watch?v=jjBuFLHaQ0o" target="_blank" rel="noopener noreferrer">축제 공연 영상 보기 <span aria-hidden="true">▷</span></a>
+        </div>
       </div>
-
-      <p class="about-description">
-        양구 공수리마을 주막할매축제는 가족과 함께하는 만들기 체험,
-        전통놀이와 마을 먹거리,
-        마을의 이야기를 만드는 참여 프로그램으로 여러분을 만납니다.
-        공수대교 근처 정자 일대에서 공수리의 가을을 즐겨보세요.
-      </p>
     </section>
 
     <!-- 운영 정보 띠 -->

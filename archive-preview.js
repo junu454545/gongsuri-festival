@@ -11,9 +11,11 @@
    const dated=items.map((item,index)=>({item,index,date:String(item.date||item.registeredAt||'').match(/\b20\d{2}[.-]\d{2}(?:[.-]\d{2})?/)?.[0].replaceAll('.','-')||''}));
    dated.sort((a,b)=>b.date.localeCompare(a.date)||b.index-a.index);
    list.replaceChildren();
-   for(const {item,date} of dated.slice(0,3)){
+   for(const {item,date,index} of dated.slice(0,3)){
     const row=document.createElement('li'),link=document.createElement('a'),title=document.createElement('strong');
-    link.href='board.html#'+key;title.textContent=item.title||item.caption||'축제 기록';link.append(title);
+    const target=key==='notices'?'board.html?notice='+index+'#notices':item.url||item.video||item.image||item.links?.[0]?.url;
+    try{const url=new URL(target||('board.html?entry='+encodeURIComponent(item.title||'')+'#'+key),location.href);link.href=['http:','https:'].includes(url.protocol)?url.href:'board.html#'+key;}catch{link.href='board.html#'+key;}
+    title.textContent=item.title||item.caption||'축제 기록';link.append(title);
     if(date){const time=document.createElement('time');time.dateTime=date;time.textContent=date.replaceAll('-','.');link.append(time);}
     row.append(link);list.append(row);
    }

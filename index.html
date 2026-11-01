@@ -64,7 +64,7 @@
       .nav-submenu { left:0; min-width:220px; top:100%; }
       .village-layout .main-nav .nav-submenu a { padding:13px 18px; font-size:13px; }
     }
-</style>
+.archive-menu{list-style:none;padding:0;margin:20px 0 0;max-width:520px;border-top:1px solid #e7ddd5}.archive-menu li{border-bottom:1px solid #e7ddd5}.archive-menu a{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 4px;color:#493426;text-decoration:none;font-size:15px}.archive-menu a:hover{color:#81624c;background:#faf8f6}.archive-menu a:focus-visible{outline:2px solid #81624c;outline-offset:3px}</style>
   <link rel="stylesheet" href="main-hero.css?v=20261101">
 </head>
 
@@ -365,13 +365,15 @@
     </section>
     <section id="resources" class="section container" aria-labelledby="resources-title">
       <div class="section-heading">
-        <p class="eyebrow">DOWNLOADS</p>
+        <p class="eyebrow">ARCHIVE</p>
         <div class="resources-title-row"><h2 id="resources-title">축제 자료실</h2></div>
-        <p>축제 안내문과 행사 자료를 확인하고 내려받으세요.</p>
+        <p>축제의 소식과 사진, 기록을 만나보세요.</p>
       </div>
-      <p id="resources-status" role="status">자료를 불러오고 있습니다.</p>
-      <ul id="resources-list" class="resources-list" aria-label="등록된 자료"></ul>
-      <noscript><p>자료 목록을 보려면 브라우저에서 자바스크립트를 켜주세요.</p></noscript>
+      <ul class="archive-menu" aria-label="자료실 목록">
+        <li><a href="board.html#press"><span>보도자료</span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="board.html#photos"><span>사진</span><span aria-hidden="true">↗</span></a></li>
+        <li><a href="board.html#statistics"><span>통계</span><span aria-hidden="true">↗</span></a></li>
+      </ul>
     </section>
   </main>
 
@@ -406,7 +408,6 @@
       <a class="back-top" href="#top" aria-label="맨 위로 이동">↑</a>
     </div>
   </footer>
-  <script src="resources.js" defer></script>
   <script src="layout.js?v=20261101-soft"></script>
   <script src="booths.js?v=20261101"></script>
 

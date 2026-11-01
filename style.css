@@ -1,10 +1,10 @@
 /* 공통 색상 */
 :root {
-  --cream: #fffaf0;
+  --cream: #faf9f6;
   --paper: #ffffff;
   --ink: #352e26;
-  --orange: #9b4b16;
-  --green: #914611;
+  --orange: #9c6233;
+  --green: #805331;
   --line: #e5d9bd;
   --navy: #352e26;
 }
@@ -127,9 +127,9 @@ summary:focus-visible {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  background-color: #fff1d1;
+  background-color: #f4f0e8;
   background-image:
-    linear-gradient(90deg, rgb(255 250 240 / 8%) 0%, rgb(255 250 240 / 12%) 40%, rgb(255 250 240 / 88%) 72%, rgb(255 250 240 / 96%) 100%),
+    linear-gradient(90deg, rgb(250 249 246 / 8%) 0%, rgb(250 249 246 / 12%) 40%, rgb(250 249 246 / 88%) 72%, rgb(250 249 246 / 96%) 100%),
     url("사진/배경/KakaoTalk_20261101_101232154.jpg");
   background-size: cover;
   background-position: 75% center;
@@ -196,7 +196,7 @@ summary:focus-visible {
 }
 
 .button-dark:hover {
-  background: #71340e;
+  background: #664125;
 }
 
 /* 운영 정보 */
@@ -214,7 +214,7 @@ summary:focus-visible {
 
 .schedule-inner > div {
   padding-left: 20px;
-  border-left: 1px solid rgb(255 250 240 / 30%);
+  border-left: 1px solid rgb(250 249 246 / 30%);
 }
 
 .schedule-label {
@@ -356,18 +356,18 @@ summary:focus-visible {
 }
 
 .cover-craft {
-  background: #fff1d1;
-  color: #7d451d;
+  background: #f4f0e8;
+  color: #70533c;
 }
 
 .cover-drink {
-  background: #fff1d1;
-  color: #7d451d;
+  background: #f4f0e8;
+  color: #70533c;
 }
 
 .cover-story {
-  background: #ff933e;
-  color: #7d451d;
+  background: #c87836;
+  color: #70533c;
 }
 
 .card-body {
@@ -378,7 +378,7 @@ summary:focus-visible {
   display: inline-block;
   padding: 4px 10px;
   border-radius: 20px;
-  background: #fffaf0;
+  background: #faf9f6;
   font-size: 12px;
   font-weight: 700;
 }
@@ -428,7 +428,7 @@ summary:focus-visible {
 .guide-card {
   padding: 24px;
   border-top: 3px solid var(--green);
-  background: #fffaf0;
+  background: #faf9f6;
 }
 
 .guide-card h3 {
@@ -444,7 +444,7 @@ summary:focus-visible {
 /* 공지와 위치 */
 .info-area {
   padding: 60px 0;
-  background: #fff1d1;
+  background: #f4f0e8;
 }
 
 .info-grid {
@@ -483,7 +483,7 @@ summary:focus-visible {
 }
 
 .location-panel {
-  background: #fffaf0;
+  background: #faf9f6;
 }
 
 .location-address {
@@ -511,7 +511,7 @@ summary:focus-visible {
 
 .footer-brand span {
   display: block;
-  color: #fff1d1;
+  color: #f4f0e8;
   font-size: 12px;
 }
 
@@ -538,7 +538,7 @@ summary:focus-visible {
 
 .footer-content p {
   margin-bottom: 5px;
-  color: #fffaf0;
+  color: #faf9f6;
   font-size: 12px;
 }
 
@@ -559,7 +559,7 @@ summary:focus-visible {
 }
 
 .festival-footer a:focus-visible {
-  outline-color: #9b4b16;
+  outline-color: #9c6233;
 }
 
 .resources-list {
@@ -657,7 +657,7 @@ summary:focus-visible {
 
   .hero {
     background-image:
-      linear-gradient(90deg, rgb(255 250 240 / 40%) 0%, rgb(255 250 240 / 86%) 45%, rgb(255 250 240 / 95%) 100%),
+      linear-gradient(90deg, rgb(250 249 246 / 40%) 0%, rgb(250 249 246 / 86%) 45%, rgb(250 249 246 / 95%) 100%),
       url("사진/배경/KakaoTalk_20261101_101232154.jpg");
   }
 
@@ -722,30 +722,21 @@ summary:focus-visible {
   }
 }
 
-/* Reference palette surfaces; dark text preserves legibility. */
-.top-bar { background:#ff933e; color:#352e26; }
-.schedule-bar { background:#fff1d1; color:#352e26; }
-.schedule-label { color:#7d451d; }
-.schedule-inner > div { border-color:#e4cca1; }
-.program-section { background:#fffaf0; }
-.guide-card { background:#fff1d1; }
-.info-area { background:#fffaf0; }
-.location-panel { background:#fff1d1; }
-.badge { background:#fff1d1; color:#352e26; }
 
-/* One coral accent with neutral surfaces. */
-.top-bar { background:#fff1d1; }
-.schedule-bar { background:#fff1d1; }
-.cover-craft, .cover-drink, .cover-story { background:#fff1d1; color:#7d451d; border-top:3px solid #ff933e; }
-.guide-card { background:#fffaf0; }
-
-/* Orange and cream dominate; blue is reserved for small accents. */
-.top-bar { background:#FF933E; color:#352e26; }
-.schedule-bar { background:#FFE9A9; color:#352e26; }
-.schedule-label { color:#70542b; }
-.cover-craft, .cover-drink, .cover-story { background:#fff1d1; border-top-color:#FF933E; color:#7d451d; }
-.quick-number { color:#345e7c; }
-.quick-links a:hover { background:#edf3f8; }
-.guide-card { border-top-color:#73A5CA; }
-.badge { background:#FFE9A9; }
-.card-note { border-top-color:#FFCB56; }
+/* Quiet neutral surfaces with related warm accents. */
+.top-bar { background:#faf9f6; color:#70675d; border-bottom:1px solid #e8e3da; }
+.schedule-bar { background:white; color:#352e26; border-bottom:1px solid #e8e3da; }
+.schedule-label { color:#8b6b4d; }
+.schedule-inner > div { border-color:#e8e3da; }
+.program-section, .info-area { background:#faf9f6; }
+.cover-craft, .cover-drink, .cover-story { background:white; color:#352e26; border-top:2px solid #c49a6c; }
+.card-cover > span:first-child { color:#8b6b4d; }
+.cover-number { color:#c87836; opacity:.18; }
+.guide-card { background:transparent; border-top:1px solid #c49a6c; }
+.info-panel, .location-panel { background:white; }
+.badge { background:#f4f0e8; color:#70533c; }
+.card-note { border-top-color:#e8e3da; }
+.quick-number { color:#a1693b; }
+.quick-links a:hover { background:#faf9f6; }
+.button-dark { background:#805331; }
+.button-dark:hover { background:#664125; }

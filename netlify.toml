@@ -1,0 +1,16 @@
+# Static festival website: publish the repository root without a build step.
+[build]
+  base = "."
+  publish = "."
+  command = ""
+
+# Revalidate HTML so visitors receive the current deployed page.
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

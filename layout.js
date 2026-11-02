@@ -9,7 +9,7 @@ const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolea
 const sectionControls = [...document.querySelectorAll('.main-nav > a[href^="#"], .main-nav summary[data-section], .quick-links a[href^="#"]')];
 const quickLinks = document.querySelector('.quick-links');
 function updateCurrentSection() {
-  const marker = (header?.getBoundingClientRect().height || 0) + (quickLinks?.getBoundingClientRect().height || 0) + 24;
+  const marker = (header?.getBoundingClientRect().height || 0) + (quickLinks?.getBoundingClientRect().height || 0) + 48;
   let active = null;
   for (const section of sections) {
     if (section.getBoundingClientRect().top <= marker) active = section.id;

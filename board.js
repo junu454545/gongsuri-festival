@@ -10,7 +10,7 @@ function video(value){try{const u=new URL(value),host=u.hostname.replace(/^www\.
 function render(items,key){const list=document.getElementById(key+'-list');list.replaceChildren();if(!items.length){list.append(el('p','아직 등록된 '+labels[key]+' 게시물이 없습니다.','empty'));return;}
 let previousYear=null;
 items.forEach(item=>{if(!item||typeof item!=='object')return;
-if(key==='press'||key==='photos'){
+if(['press','photos','statistics'].includes(key)){
  const year=String(item.year||'공통');
  if(year!==previousYear){
   const heading=el('h3',year==='공통'?'연도 공통 자료':year+'년 자료','press-year-heading');
@@ -78,5 +78,5 @@ function setupPress(items,key='press'){
  });render(visible,key);document.getElementById(key+'-count').textContent=`총 ${items.length}건 중 ${visible.length}건`;}
  filter.addEventListener('change',update);update();
 }
-fetch('board.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('load');return r.json();}).then(data=>{setupPress(Array.isArray(data.press)?data.press:[]);setupPress(Array.isArray(data.photos)?data.photos:[],'photos');renderNotices(Array.isArray(data.notices)?data.notices:[]);keys.filter(k=>k!=='press'&&k!=='photos'&&k!=='notices').forEach(k=>render(Array.isArray(data[k])?data[k]:[],k));document.getElementById('status').textContent='';const entry=new URLSearchParams(location.search).get('entry');if(entry)requestAnimationFrame(()=>document.getElementById('entry-'+entry)?.scrollIntoView({block:'center'}));}).catch(()=>document.getElementById('status').textContent='자료를 불러오지 못했습니다. 잠시 후 새로고침해주세요.');
+fetch('board.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('load');return r.json();}).then(data=>{setupPress(Array.isArray(data.press)?data.press:[]);setupPress(Array.isArray(data.photos)?data.photos:[],'photos');setupPress(Array.isArray(data.statistics)?data.statistics:[],'statistics');renderNotices(Array.isArray(data.notices)?data.notices:[]);keys.filter(k=>k!=='press'&&k!=='photos'&&k!=='statistics'&&k!=='notices').forEach(k=>render(Array.isArray(data[k])?data[k]:[],k));document.getElementById('status').textContent='';const entry=new URLSearchParams(location.search).get('entry');if(entry)requestAnimationFrame(()=>document.getElementById('entry-'+entry)?.scrollIntoView({block:'center'}));}).catch(()=>document.getElementById('status').textContent='자료를 불러오지 못했습니다. 잠시 후 새로고침해주세요.');
 })();

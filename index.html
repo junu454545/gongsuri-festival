@@ -118,6 +118,9 @@
       .village-layout .back-top { right:calc(16px + env(safe-area-inset-right,0px)); bottom:calc(20px + env(safe-area-inset-bottom,0px)); }
       .village-layout .festival-footer .footer-inner { padding-right:60px; }
     }
+  
+    .nav-dropdown summary.is-current { color:#81624c; }
+    .nav-dropdown summary.is-current::after { transform:scaleX(1); }
   </style>
   <link rel="stylesheet" href="main-hero.css?v=20261101">
 </head>
@@ -143,7 +146,7 @@
 
       <nav class="main-nav" aria-label="주요 메뉴">
         <details class="nav-dropdown">
-          <summary>축제 소개</summary>
+          <summary data-section="about">축제 소개</summary>
           <div class="nav-submenu">
             <a href="about.html#village">공수리 마을 소개</a>
             <a href="about.html#festival-story">축제 배경 이야기</a>
@@ -155,7 +158,7 @@
         <a href="#guide">이용 안내</a>
         <a href="#location">오시는 길</a>
         <details class="nav-dropdown">
-          <summary>자료실</summary>
+          <summary data-section="resources">자료실</summary>
           <div class="nav-submenu">
             <a href="board.html#notices">공지사항</a>
             <a href="board.html#press">보도 자료</a>
@@ -462,7 +465,7 @@
     </div>
   </footer>
   <a class="back-top" href="#top" aria-label="맨 위로 이동">↑</a>
-  <script src="layout.js?v=20261101-soft"></script>
+  <script src="layout.js?v=20261102-scroll-nav"></script>
   <script src="booths.js?v=20261101"></script>
 
   <script>

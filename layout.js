@@ -3,19 +3,39 @@ const header = document.querySelector('.site-header');
 const updateHeaderHeight = () => document.documentElement.style.setProperty('--header-height', `${header.getBoundingClientRect().height}px`);
 new ResizeObserver(updateHeaderHeight).observe(header);
 updateHeaderHeight();
-const sectionLinks = document.querySelectorAll('.main-nav a, .quick-links a');
-const sections = [...new Set([...sectionLinks].map(link => document.querySelector(link.getAttribute('href'))))].filter(Boolean);
-const sectionObserver = new IntersectionObserver(entries => {
-  const active = entries.filter(entry => entry.isIntersecting).sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0];
-  if (!active) return;
-  sectionLinks.forEach(link => {
-    const selected = link.getAttribute('href') === `#${active.target.id}`;
-    link.classList.toggle('is-current', selected);
-    if (selected) link.setAttribute('aria-current', 'location');
-    else link.removeAttribute('aria-current');
+// Include dropdown summaries as well as direct section links.
+const sectionIds = ['about', 'programs', 'guide', 'location', 'resources'];
+const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+const sectionControls = [...document.querySelectorAll('.main-nav > a[href^="#"], .main-nav summary[data-section], .quick-links a[href^="#"]')];
+const quickLinks = document.querySelector('.quick-links');
+function updateCurrentSection() {
+  const marker = (header?.getBoundingClientRect().height || 0) + (quickLinks?.getBoundingClientRect().height || 0) + 24;
+  let active = null;
+  for (const section of sections) {
+    if (section.getBoundingClientRect().top <= marker) active = section.id;
+  }
+  if (sections.length && window.scrollY > 0 && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+    active = sections[sections.length - 1].id;
+  }
+  sectionControls.forEach(control => {
+    const target = control.dataset.section || control.getAttribute('href')?.slice(1);
+    const selected = target === active;
+    control.classList.toggle('is-current', selected);
+    if (selected) control.setAttribute('aria-current', 'location');
+    else control.removeAttribute('aria-current');
   });
-}, { rootMargin: '-25% 0px -45% 0px' });
-sections.forEach(section => sectionObserver.observe(section));
+}
+let sectionUpdatePending = false;
+function scheduleSectionUpdate() {
+  if (sectionUpdatePending) return;
+  sectionUpdatePending = true;
+  requestAnimationFrame(() => { sectionUpdatePending = false; updateCurrentSection(); });
+}
+window.addEventListener('scroll', scheduleSectionUpdate, {passive:true});
+window.addEventListener('resize', scheduleSectionUpdate);
+window.addEventListener('load', scheduleSectionUpdate);
+new ResizeObserver(scheduleSectionUpdate).observe(document.body);
+updateCurrentSection();
 filters.forEach(button => button.addEventListener('click', () => {
   filters.forEach(item => {
     const selected = item === button;

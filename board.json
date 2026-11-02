@@ -917,5 +917,19 @@
       "linkLabel": "엑셀 내려받기"
     }
   ],
-  "notices": []
+  "notices": [
+    {
+      "title": "공수리 마을 축제 배 운행시간표 안내",
+      "author": "관리자",
+      "date": "2026-11-02",
+      "content": "공수리 마을 축제 배 운행시간표를 안내합니다.\n\n• 운행 시간: 11:00~15:00\n• 운행 간격: 15분\n• 회차당 참여: 2팀\n• 한 팀 최대 인원: 4명\n• 총 17회 운행 · 34팀\n\n각 운행 시간에 참여할 팀을 적어주세요.\n자세한 운행시간표는 아래 미리보기와 첨부 PDF에서 확인하실 수 있습니다.",
+      "image": "assets/notices/boat-schedule.jpg",
+      "attachments": [
+        {
+          "label": "배 운행시간표 PDF 열기 · 내려받기",
+          "url": "files/gongsuri-boat-schedule.pdf"
+        }
+      ]
+    }
+  ]
 }

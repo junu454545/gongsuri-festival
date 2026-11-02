@@ -43,8 +43,8 @@ if(item.source)copy.append(el('p',item.source,'press-source'));
 if(key==='statistics'&&item.value!==undefined)copy.append(el('strong',String(item.value)+(item.unit||''),'value'));
 if(item.title){card.id='entry-'+item.title;const heading=el('h3');if(key==='press'&&safe(item.url)){const titleLink=el('a',item.title);titleLink.href=safe(item.url);titleLink.target='_blank';titleLink.rel='noopener noreferrer';heading.append(titleLink);}else heading.textContent=item.title;copy.append(heading);}
 if(item.caption||item.description)copy.append(el('p',item.caption||item.description));
-const links=key==='press'&&Array.isArray(item.links)&&item.links.length?item.links:[{url:item.url,label:key==='press'?'원문 / 자료 보기':'자료 자세히 보기'}];
-for(const link of links){if(!safe(link.url))continue;const a=el('a',(link.label||'원문 열기')+' ↗');a.href=safe(link.url);a.target='_blank';a.rel='noopener noreferrer';copy.append(a);}
+const links=key==='press'&&Array.isArray(item.links)&&item.links.length?item.links:[{url:item.url,label:item.linkLabel||(key==='press'?'원문 / 자료 보기':'자료 자세히 보기')}];
+for(const link of links){if(!safe(link.url))continue;const a=el('a',(link.label||'원문 열기')+' ↗');a.href=safe(link.url);a.target='_blank';a.rel='noopener noreferrer';if(item.download)a.download=item.url.split('/').pop();copy.append(a);}
 card.append(copy);list.append(card);});}
 
 function renderNotices(items){

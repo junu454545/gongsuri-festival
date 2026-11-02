@@ -879,6 +879,43 @@
       "registeredAt": "2026-11-01"
     }
   ],
-  "statistics": [],
+  "statistics": [
+    {
+      "year": "2026",
+      "date": "2026-11-02",
+      "title": "2026년 공수리마을 축제 결과요약",
+      "description": "결과를 한눈에 볼 수 있는 1쪽 요약 자료입니다. (PDF)",
+      "url": "files/gongsuri-2026-results-summary.pdf",
+      "download": true,
+      "linkLabel": "PDF 내려받기"
+    },
+    {
+      "year": "2026",
+      "date": "2026-11-02",
+      "title": "2026년 공수리마을 만족도 분석보고서",
+      "description": "축제 만족도 조사 분석보고서입니다. (PDF)",
+      "url": "files/gongsuri-2026-satisfaction-report.pdf",
+      "download": true,
+      "linkLabel": "PDF 내려받기"
+    },
+    {
+      "year": "2026",
+      "date": "2026-11-02",
+      "title": "2026년 공수리마을 설문분석집",
+      "description": "설문 분석을 정리한 엑셀 자료입니다. (엑셀)",
+      "url": "files/gongsuri-2026-survey-analysis.xlsx",
+      "download": true,
+      "linkLabel": "엑셀 내려받기"
+    },
+    {
+      "year": "2026",
+      "date": "2026-11-02",
+      "title": "2026년 공수리마을 만족도 조사 응답",
+      "description": "축제 만족도 조사 응답을 모은 엑셀 자료입니다. (엑셀)",
+      "url": "files/gongsuri-2026-survey-responses.xlsx",
+      "download": true,
+      "linkLabel": "엑셀 내려받기"
+    }
+  ],
   "notices": []
 }

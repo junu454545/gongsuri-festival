@@ -139,7 +139,14 @@
     .archive-gallery .archive-recent li:first-child .archive-thumb { width:100%; height:auto; flex:auto; aspect-ratio:16/9; }
     .archive-preview-columns a:focus-visible { outline:2px solid #81624c; outline-offset:4px; }
     @media(max-width:650px) { .archive-columns.archive-preview-columns { grid-template-columns:1fr; gap:32px; } .archive-thumb { flex-basis:96px; width:96px; height:72px; } }
-.archive-columns.archive-preview-columns{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}.archive-text-list .archive-recent a{display:block}.archive-preview-columns .archive-column-heading{gap:8px}.archive-preview-columns .archive-column-heading h3{font-size:18px}.archive-preview-columns .archive-view-all{font-size:11px;white-space:nowrap}.archive-preview-columns .archive-thumb{flex-basis:72px;width:72px;height:58px}.archive-preview-columns .archive-recent a{gap:10px}.archive-preview-columns .archive-recent strong{font-size:13px}@media(max-width:1000px){.archive-columns.archive-preview-columns{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.archive-columns.archive-preview-columns{grid-template-columns:1fr}}</style>
+.archive-columns.archive-preview-columns{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}.archive-text-list .archive-recent a{display:block}.archive-preview-columns .archive-column-heading{gap:8px}.archive-preview-columns .archive-column-heading h3{font-size:18px}.archive-preview-columns .archive-view-all{font-size:11px;white-space:nowrap}.archive-preview-columns .archive-thumb{flex-basis:72px;width:72px;height:58px}.archive-preview-columns .archive-recent a{gap:10px}.archive-preview-columns .archive-recent strong{font-size:13px}@media(max-width:1000px){.archive-columns.archive-preview-columns{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.archive-columns.archive-preview-columns{grid-template-columns:1fr}}
+    .village-layout .guide-card { display:flex; flex-direction:column; align-items:flex-start; }
+    .village-layout .guide-card h3 { line-height:1.5; }
+    .village-layout .guide-card p { margin:0 0 24px; }
+    .guide-link { display:inline-flex; align-items:center; gap:12px; margin-top:auto; padding:8px 0; color:#81624c; font-size:14px; font-weight:700; text-decoration:none; }
+    .guide-link:hover { text-decoration:underline; }
+    .guide-link:focus-visible { outline:2px solid #81624c; outline-offset:4px; }
+  </style>
   <link rel="stylesheet" href="main-hero.css?v=20261101">
 </head>
 
@@ -381,33 +388,21 @@
         <p class="eyebrow">방문 안내</p>
         <h2>방문 전에 확인해주세요</h2>
       </div>
-
       <div class="guide-grid">
         <article class="guide-card">
-          <h3>입장 팔찌 안내</h3>
-          <p>
-            종이 팔찌는 축제 운영부스에서 받으실 수 있습니다.
-            팔찌로 이용할 수 있는 부스와 응모권 안내는
-            위의 ‘종이 팔찌 안내’에서 확인해주세요.
-          </p>
+          <h3>팔찌는 어디서 받나요?</h3>
+          <p>축제 운영부스에서 종이 팔찌를 받아주세요. 이용 가능한 부스와 응모 방법을 확인하세요.</p>
+          <a class="guide-link" href="#programs" data-guide-wristband aria-haspopup="dialog">팔찌·응모권 안내 <span aria-hidden="true">→</span></a>
         </article>
-
         <article class="guide-card">
-          <h3>체험 참여 안내</h3>
-          <p>
-            부스별 참여 방법과 필요한 엽전은
-            각 안내문을 눌러 확인해주세요.
-            전체 부스는 ‘체험부스 한눈에 보기’에 정리되어 있습니다.
-          </p>
+          <h3>체험은 어떻게 참여하나요?</h3>
+          <p>체험마다 참여 방법과 필요한 엽전이 달라요. 원하는 부스의 안내문을 확인해주세요.</p>
+          <a class="guide-link" href="#programs">체험 부스 보기 <span aria-hidden="true">→</span></a>
         </article>
-
         <article class="guide-card">
-          <h3>운영 변경 안내</h3>
-          <p>
-            날씨와 현장 상황에 따라 운영 내용이
-            달라질 수 있습니다.
-            현장 운영 안내를 확인해주세요.
-          </p>
+          <h3>방문 전 최신 소식을 확인하세요</h3>
+          <p>날씨와 현장 상황에 따라 운영 내용이 달라질 수 있어요. 변경 사항은 공지사항에서 확인해주세요.</p>
+          <a class="guide-link" href="board.html#notices">공지사항 보기 <span aria-hidden="true">→</span></a>
         </article>
       </div>
     </section>
@@ -521,6 +516,15 @@
     window.scrollTo({top:0, left:0, behavior:reducedMotion ? 'instant' : 'smooth'});
   });
 })();
+</script>
+<script>
+document.querySelector('[data-guide-wristband]')?.addEventListener('click', event => {
+  const button = document.querySelector('.booth-open[data-booth-index="11"]');
+  if (!button || !document.querySelector('.booth-dialog')?.showModal) return;
+  event.preventDefault();
+  document.querySelector('[data-booth-filter="이용 안내"]')?.click();
+  button.click();
+});
 </script>
 </body>
 </html>

@@ -25,13 +25,23 @@ if(key==='photos'){
  list.append(card);return;
 }
 const card=el(key==='photos'?'figure':'article',undefined,'card'),id=key==='press'?video(item.url):null;
-if(id){const f=el('iframe');f.src='https://www.youtube-nocookie.com/embed/'+id;f.title=item.title||'축제 영상';f.loading='lazy';f.allowFullscreen=true;f.allow='encrypted-media; picture-in-picture';card.append(f);}else if(safe(item.image)){const img=el('img');img.src=safe(item.image);img.alt=item.caption||item.title||'축제 사진';img.loading='lazy';img.addEventListener('error',()=>img.replaceWith(el('p','이미지를 불러올 수 없습니다.','copy')));const media=el('div',undefined,'archive-image');media.append(img);card.append(media);}
+if(key==='press'){
+ const target=safe(item.url),media=el(target?'a':'div',undefined,'archive-image press-thumbnail');
+ if(target){media.href=target;media.target='_blank';media.rel='noopener noreferrer';media.setAttribute('aria-label',(item.title||'보도자료')+' 원문 열기');}
+ const isVideo=Boolean(id)||/영상|방송/.test(item.type||'');
+ const fallback=()=>el('span',isVideo?'영상 보기':/PDF/.test(item.type||'')?'PDF 자료':'보도자료','press-thumbnail-empty');
+ if(safe(item.image)){
+  const img=el('img');img.src=safe(item.image);img.alt=item.imageAlt||item.title||'보도자료 대표 사진';img.loading='lazy';img.decoding='async';img.width=480;img.height=300;img.addEventListener('error',()=>img.replaceWith(fallback()));media.append(img);
+ }else media.append(fallback());
+ if(isVideo){const play=el('span','▶','press-play');play.setAttribute('aria-hidden','true');media.append(play);}
+ card.append(media);
+}else if(id){const f=el('iframe');f.src='https://www.youtube-nocookie.com/embed/'+id;f.title=item.title||'축제 영상';f.loading='lazy';f.allowFullscreen=true;f.allow='encrypted-media; picture-in-picture';card.append(f);}else if(safe(item.image)){const img=el('img');img.src=safe(item.image);img.alt=item.caption||item.title||'축제 사진';img.loading='lazy';img.addEventListener('error',()=>img.replaceWith(el('p','이미지를 불러올 수 없습니다.','copy')));const media=el('div',undefined,'archive-image');media.append(img);card.append(media);}
 const copy=el(key==='photos'?'figcaption':'div',undefined,'copy');
 if(key==='press'&&(item.year||item.type))copy.append(el('span',[item.year==='공통'?'연도 공통':item.year?item.year+'년':'',item.type].filter(Boolean).join(' · '),'press-tag'));
 if(item.date)copy.append(el('small',item.date));
 if(item.source)copy.append(el('p',item.source,'press-source'));
 if(key==='statistics'&&item.value!==undefined)copy.append(el('strong',String(item.value)+(item.unit||''),'value'));
-if(item.title){card.id='entry-'+item.title;copy.append(el('h3',item.title));}
+if(item.title){card.id='entry-'+item.title;const heading=el('h3');if(key==='press'&&safe(item.url)){const titleLink=el('a',item.title);titleLink.href=safe(item.url);titleLink.target='_blank';titleLink.rel='noopener noreferrer';heading.append(titleLink);}else heading.textContent=item.title;copy.append(heading);}
 if(item.caption||item.description)copy.append(el('p',item.caption||item.description));
 const links=key==='press'&&Array.isArray(item.links)&&item.links.length?item.links:[{url:item.url,label:key==='press'?'원문 / 자료 보기':'자료 자세히 보기'}];
 for(const link of links){if(!safe(link.url))continue;const a=el('a',(link.label||'원문 열기')+' ↗');a.href=safe(link.url);a.target='_blank';a.rel='noopener noreferrer';copy.append(a);}

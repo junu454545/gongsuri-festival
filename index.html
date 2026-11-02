@@ -12,7 +12,7 @@
     양구 공수대교 근처 정자 일대에서 열리는 주막할매축제."
   >
 
-  <link rel="stylesheet" href="style.css?v=20261101-floating-top">
+  <link rel="stylesheet" href="style.css?v=20261102-floating-top">
   <link rel="stylesheet" href="layout.css?v=20261101-white-pastel">
   <link rel="stylesheet" href="ui.css?v=20261101-white">
   <link rel="stylesheet" href="booths.css?v=20261101-compact">
@@ -109,7 +109,16 @@
     .festival-overview h2 span { color:#81624c; background:none; }
     .overview-divider { width:56px; margin:28px auto; border:0; border-top:2px solid #c6ac98; }
     .overview-lead { margin:0; color:#796755; font-family:inherit; font-size:16px; line-height:1.9; }
-  .archive-columns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:28px}.archive-column{min-width:0}.archive-column-heading{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;border-bottom:2px solid #c6ac98}.archive-column-heading h3{margin:0;font-size:19px}.archive-column-heading>a{padding:0 6px;font-size:25px;color:#81624c;text-decoration:none}.archive-recent{list-style:none;margin:0;padding:0}.archive-recent li{border-bottom:1px solid #eee8e3}.archive-recent a{display:block;padding:15px 0;color:#493426;text-decoration:none}.archive-recent strong{display:block;font-size:14px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.archive-recent time{display:block;margin-top:5px;font-size:12px;color:#796755}.archive-recent a:hover strong{text-decoration:underline}.archive-placeholder{padding:20px 0;color:#796755;font-size:13px}@media(max-width:900px){.archive-columns{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.archive-columns{grid-template-columns:1fr}}.official-blog-link{display:inline-flex;align-items:center;gap:16px;margin:14px 0 6px;padding:9px 15px;border:1px solid #c6ac98;border-radius:6px;color:inherit;background:transparent;text-decoration:none;font-size:13px;line-height:1.5;opacity:.85}.official-blog-link:hover{opacity:1;background:rgba(198,172,152,.12)}.official-blog-link:focus-visible{outline:2px solid #81624c;outline-offset:4px}</style>
+  .archive-columns{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;margin-top:28px}.archive-column{min-width:0}.archive-column-heading{display:flex;align-items:center;justify-content:space-between;padding-bottom:14px;border-bottom:2px solid #c6ac98}.archive-column-heading h3{margin:0;font-size:19px}.archive-column-heading>a{padding:0 6px;font-size:25px;color:#81624c;text-decoration:none}.archive-recent{list-style:none;margin:0;padding:0}.archive-recent li{border-bottom:1px solid #eee8e3}.archive-recent a{display:block;padding:15px 0;color:#493426;text-decoration:none}.archive-recent strong{display:block;font-size:14px;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.archive-recent time{display:block;margin-top:5px;font-size:12px;color:#796755}.archive-recent a:hover strong{text-decoration:underline}.archive-placeholder{padding:20px 0;color:#796755;font-size:13px}@media(max-width:900px){.archive-columns{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.archive-columns{grid-template-columns:1fr}}.official-blog-link{display:inline-flex;align-items:center;gap:16px;margin:14px 0 6px;padding:9px 15px;border:1px solid #c6ac98;border-radius:6px;color:inherit;background:transparent;text-decoration:none;font-size:13px;line-height:1.5;opacity:.85}.official-blog-link:hover{opacity:1;background:rgba(198,172,152,.12)}.official-blog-link:focus-visible{outline:2px solid #81624c;outline-offset:4px}
+    .village-layout .back-top { position:fixed; inset:auto calc(24px + env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) auto; z-index:40; display:flex; align-items:center; justify-content:center; width:48px; height:48px; border-radius:50%; background:#c6ac98; color:#493426; text-decoration:none; line-height:1; box-shadow:0 4px 10px rgb(0 0 0 / 12%); -webkit-tap-highlight-color:transparent; }
+    .village-layout .back-top:hover { background:#b99b83; }
+    .village-layout .festival-footer .footer-inner { padding-right:72px; }
+    .village-layout .festival-footer { padding-bottom:calc(88px + env(safe-area-inset-bottom,0px)); }
+    @media(max-width:650px) {
+      .village-layout .back-top { right:calc(16px + env(safe-area-inset-right,0px)); bottom:calc(20px + env(safe-area-inset-bottom,0px)); }
+      .village-layout .festival-footer .footer-inner { padding-right:60px; }
+    }
+  </style>
   <link rel="stylesheet" href="main-hero.css?v=20261101">
 </head>
 
@@ -476,5 +485,17 @@
     })();
   </script>
 <script src="archive-preview.js?v=20261101-direct" defer></script>
+
+<script>
+(() => {
+  const backTop = document.querySelector('.back-top');
+  if (!backTop) return;
+  backTop.addEventListener('click', event => {
+    event.preventDefault();
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top:0, left:0, behavior:reducedMotion ? 'instant' : 'smooth'});
+  });
+})();
+</script>
 </body>
 </html>

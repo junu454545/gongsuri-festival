@@ -4,7 +4,7 @@ const updateHeaderHeight = () => document.documentElement.style.setProperty('--h
 new ResizeObserver(updateHeaderHeight).observe(header);
 updateHeaderHeight();
 // Include dropdown summaries as well as direct section links.
-const sectionIds = ['about', 'programs', 'guide', 'location', 'resources'];
+const sectionIds = ['about', 'guide', 'programs', 'location', 'resources'];
 const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 const sectionControls = [...document.querySelectorAll('.main-nav > a[href^="#"], .main-nav summary[data-section], .quick-links a[href^="#"]')];
 const quickLinks = document.querySelector('.quick-links');

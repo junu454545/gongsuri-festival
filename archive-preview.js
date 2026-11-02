@@ -1,6 +1,6 @@
 'use strict';
 (async()=>{
- const keys=['press','photos'];
+ const keys=['notices','press','photos','statistics'];
  function node(tag,text,cls){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;return el;}
  function safe(value){if(typeof value!=='string'||!value.trim())return null;try{const u=new URL(value,location.href);return ['http:','https:'].includes(u.protocol)?u.href:null;}catch{return null;}}
  function media(item,key){
@@ -20,12 +20,12 @@
    const items=(Array.isArray(data[key])?data[key]:[]).filter(item=>item&&typeof item==='object');
    const dated=items.map((item,index)=>({item,index,date:String(item.date||item.registeredAt||'').match(/\b20\d{2}[.-]\d{2}(?:[.-]\d{2})?/)?.[0].replaceAll('.','-')||''}));
    dated.sort((a,b)=>b.date.localeCompare(a.date)||b.index-a.index);list.replaceChildren();
-   for(const {item,date} of dated.slice(0,3)){
+   for(const {item,date,index} of dated.slice(0,3)){
     const row=node('li'),link=node('a'),copy=node('span',undefined,'archive-preview-copy');
-    link.href=safe(item.url||item.video||item.image||item.links?.[0]?.url)||'board.html#'+key;
+    link.href=key==='notices'?'board.html?notice='+index+'#notices':safe(item.url||item.video||item.image||item.links?.[0]?.url)||'board.html#'+key;
     copy.append(node('strong',item.title||item.caption||'축제 기록'));
     if(date){const time=node('time',date.replaceAll('-','.'));time.dateTime=date;copy.append(time);}
-    link.append(media(item,key),copy);row.append(link);list.append(row);
+    if(key==='press'||key==='photos')link.append(media(item,key));link.append(copy);row.append(link);list.append(row);
    }
    if(!items.length)list.append(node('li','등록된 자료가 없습니다.','archive-placeholder'));
   }

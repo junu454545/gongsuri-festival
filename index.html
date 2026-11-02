@@ -139,7 +139,7 @@
     .archive-gallery .archive-recent li:first-child .archive-thumb { width:100%; height:auto; flex:auto; aspect-ratio:16/9; }
     .archive-preview-columns a:focus-visible { outline:2px solid #81624c; outline-offset:4px; }
     @media(max-width:650px) { .archive-columns.archive-preview-columns { grid-template-columns:1fr; gap:32px; } .archive-thumb { flex-basis:96px; width:96px; height:72px; } }
-</style>
+.archive-columns.archive-preview-columns{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}.archive-text-list .archive-recent a{display:block}.archive-preview-columns .archive-column-heading{gap:8px}.archive-preview-columns .archive-column-heading h3{font-size:18px}.archive-preview-columns .archive-view-all{font-size:11px;white-space:nowrap}.archive-preview-columns .archive-thumb{flex-basis:72px;width:72px;height:58px}.archive-preview-columns .archive-recent a{gap:10px}.archive-preview-columns .archive-recent strong{font-size:13px}@media(max-width:1000px){.archive-columns.archive-preview-columns{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.archive-columns.archive-preview-columns{grid-template-columns:1fr}}</style>
   <link rel="stylesheet" href="main-hero.css?v=20261101">
 </head>
 
@@ -448,8 +448,10 @@
         <p>축제의 소식과 사진, 기록을 만나보세요.</p>
       </div>
       <div class="archive-columns archive-preview-columns">
+<section class="archive-column archive-text-list" aria-labelledby="recent-notices-title"><div class="archive-column-heading"><h3 id="recent-notices-title">공지사항</h3><a class="archive-view-all" href="board.html#notices">전체 보기 →</a></div><ul id="recent-notices" class="archive-recent"><li>자료를 불러오고 있습니다.</li></ul></section>
         <section class="archive-column" aria-labelledby="recent-press-title"><div class="archive-column-heading"><h3 id="recent-press-title">보도자료</h3><a class="archive-view-all" href="board.html#press">전체 보기 →</a></div><ul id="recent-press" class="archive-recent"><li>자료를 불러오고 있습니다.</li></ul></section>
         <section class="archive-column archive-gallery" aria-labelledby="recent-photos-title"><div class="archive-column-heading"><h3 id="recent-photos-title">갤러리</h3><a class="archive-view-all" href="board.html#photos">전체 보기 →</a></div><ul id="recent-photos" class="archive-recent"><li>자료를 불러오고 있습니다.</li></ul></section>
+<section class="archive-column archive-text-list" aria-labelledby="recent-statistics-title"><div class="archive-column-heading"><h3 id="recent-statistics-title">통계</h3><a class="archive-view-all" href="board.html#statistics">전체 보기 →</a></div><ul id="recent-statistics" class="archive-recent"><li>자료를 불러오고 있습니다.</li></ul></section>
       </div>
     </section>
   </main>
@@ -507,7 +509,7 @@
       });
     })();
   </script>
-<script src="archive-preview.js?v=20261102-gallery" defer></script>
+<script src="archive-preview.js?v=20261102-four-lists" defer></script>
 
 <script>
 (() => {

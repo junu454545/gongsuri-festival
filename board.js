@@ -49,7 +49,11 @@ card.append(copy);list.append(card);});}
 
 function renderNotices(items){
  const list=document.getElementById('notices-list');list.replaceChildren();
- const valid=items.filter(item=>item&&typeof item==='object').sort((a,b)=>String(b.date||'').localeCompare(String(a.date||'')));
+ const valid=items.filter(item=>item&&typeof item==='object').sort((a,b)=>{
+  const aNumber=Number.isInteger(a.number)&&a.number>0?a.number:null,bNumber=Number.isInteger(b.number)&&b.number>0?b.number:null;
+  if(aNumber!==null&&bNumber!==null)return aNumber-bNumber;
+  return String(b.date||'').localeCompare(String(a.date||''));
+ });
  if(!valid.length){const row=el('tr'),cell=el('td','아직 등록된 공지사항이 없습니다.','notice-empty');cell.colSpan=5;row.append(cell);list.append(row);return;}
  valid.forEach((item,index)=>{
   const row=el('tr'),titleCell=el('td'),button=el('button',item.title||'공지사항','notice-title');button.type='button';
@@ -57,7 +61,7 @@ function renderNotices(items){
   button.setAttribute('aria-expanded','false');button.setAttribute('aria-controls',detail.id);
   button.addEventListener('click',()=>{detail.hidden=!detail.hidden;button.setAttribute('aria-expanded',String(!detail.hidden));});
   titleCell.append(button);if(Array.isArray(item.attachments)&&item.attachments.some(a=>safe(a.url)))titleCell.append(el('span',' 📎'));
-  row.append(el('td',String(valid.length-index)),titleCell,el('td',item.author||'관리자'),el('td',item.date||'—'),el('td',item.views===undefined?'—':String(item.views)));
+  row.append(el('td',String(Number.isInteger(item.number)&&item.number>0?item.number:valid.length-index)),titleCell,el('td',item.author||'관리자'),el('td',item.date||'—'),el('td',item.views===undefined?'—':String(item.views)));
   body.append(el('p',item.content||item.description||''));
   if(safe(item.image)){const img=el('img');img.src=safe(item.image);img.alt=item.title||'공지사항 첨부 이미지';img.loading='lazy';body.append(img);}
   const links=[...(Array.isArray(item.attachments)?item.attachments:[]),...(item.url?[{url:item.url,label:'관련 자료 보기'}]:[])];

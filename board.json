@@ -919,9 +919,23 @@
   ],
   "notices": [
     {
+      "number": 1,
+      "title": "2026 공수리마을 주막할매축제 부스현황 안내",
+      "author": "관리자",
+      "date": "2026-10-02",
+      "content": "2026 공수리마을 주막할매축제의 부스현황을 안내합니다.\n\n안내부스, 주막체험, 음식·막걸리, 만들기 체험, 전통놀이 등 15개 부스의 운영 내용과 엽전 조건을 확인하실 수 있습니다.\n\n엽전 표시 안내\n• + : 지급 / 획득\n• - : 차감 / 사용\n\n부스별 자세한 내용은 아래 미리보기와 첨부 PDF를 확인해주세요.",
+      "image": "assets/notices/booth-status-2026.jpg",
+      "attachments": [
+        {
+          "label": "2026 축제 부스현황 PDF 열기 · 내려받기",
+          "url": "files/gongsuri-booth-status-2026.pdf"
+        }
+      ]
+    },
+    {
       "title": "공수리 마을 축제 배 운행시간표 안내",
       "author": "관리자",
-      "date": "2026-11-02",
+      "date": "2026-10-02",
       "content": "공수리 마을 축제 배 운행시간표를 안내합니다.\n\n• 운행 시간: 11:00~15:00\n• 운행 간격: 15분\n• 회차당 참여: 2팀\n• 한 팀 최대 인원: 4명\n• 총 17회 운행 · 34팀\n\n각 운행 시간에 참여할 팀을 적어주세요.\n자세한 운행시간표는 아래 미리보기와 첨부 PDF에서 확인하실 수 있습니다.",
       "image": "assets/notices/boat-schedule.jpg",
       "attachments": [
@@ -929,7 +943,8 @@
           "label": "배 운행시간표 PDF 열기 · 내려받기",
           "url": "files/gongsuri-boat-schedule.pdf"
         }
-      ]
+      ],
+      "number": 2
     }
   ]
 }

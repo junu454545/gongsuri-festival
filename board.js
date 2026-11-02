@@ -1,7 +1,7 @@
 'use strict';
 (() => {
 const keys=['notices','press','photos','statistics'];
-const labels={press:'보도 자료',photos:'축제 사진',statistics:'통계 자료'};
+const labels={press:'보도 자료',photos:'갤러리',statistics:'통계 자료'};
 function select(){const key=keys.includes(location.hash.slice(1))?location.hash.slice(1):'notices';keys.forEach(k=>document.getElementById(k).hidden=k!==key);document.querySelectorAll('[data-section]').forEach(a=>{if(a.dataset.section===key)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});}
 addEventListener('hashchange',select);select();
 function el(tag,text,cls){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;}
@@ -21,7 +21,7 @@ if(['press','photos','statistics'].includes(key)){
 if(key==='photos'){
  const card=el('figure',undefined,'card');
  if(safe(item.video)){const player=el('video');player.src=safe(item.video);player.controls=true;player.preload='metadata';player.playsInline=true;player.setAttribute('aria-label',item.title||'축제 영상');const fallback=el('a','영상 열기');fallback.href=safe(item.video);player.append(fallback);card.append(player);}
- else if(safe(item.image)){const link=el('a',undefined,'archive-image');link.href=safe(item.image);link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',(item.year||'')+'년 축제 사진 원본 보기');const img=el('img');img.src=safe(item.image);img.alt=item.title||'축제 사진';img.loading='lazy';link.append(img);card.append(link);}
+ else if(safe(item.image)){const link=el('a',undefined,'archive-image');link.href=safe(item.image);link.target='_blank';link.rel='noopener noreferrer';link.setAttribute('aria-label',(item.year||'')+'년 갤러리 사진 원본 보기');const img=el('img');img.src=safe(item.image);img.alt=item.title||'축제 사진';img.loading='lazy';link.append(img);card.append(link);}
  list.append(card);return;
 }
 const card=el(key==='photos'?'figure':'article',undefined,'card'),id=key==='press'?video(item.url):null;

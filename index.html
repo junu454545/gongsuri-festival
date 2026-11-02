@@ -125,6 +125,20 @@
     .village-layout .official-blog-link { padding:14px 24px; border:1px solid #81624c; border-radius:30px; background:#81624c; color:#fff; font-size:15px; font-weight:700; opacity:1; box-shadow:0 6px 16px rgb(129 98 76 / 20%); }
     .village-layout .official-blog-link:hover { background:#654b39; border-color:#654b39; color:#fff; }
     .village-layout .official-blog-link:focus-visible { outline:3px solid #81624c; outline-offset:4px; }
+
+    .archive-columns.archive-preview-columns { grid-template-columns:repeat(2,minmax(0,1fr)); gap:40px; }
+    .archive-column-heading>.archive-view-all { font-size:13px; padding:6px 0 6px 12px; white-space:nowrap; }
+    .archive-preview-columns .archive-recent a { display:flex; align-items:center; gap:16px; padding:18px 0; }
+    .archive-thumb { position:relative; display:flex; align-items:center; justify-content:center; flex:0 0 112px; width:112px; height:80px; background:#f6f1ed; border-radius:8px; overflow:hidden; }
+    .archive-thumb img,.archive-thumb video { display:block; width:100%; height:100%; object-fit:cover; }
+    .archive-thumb-empty { color:#81624c; font-size:12px; }
+    .archive-thumb-play { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); display:grid; place-items:center; width:34px; height:34px; border-radius:50%; color:#fff; background:rgb(42 26 14 / 65%); font-size:14px; }
+    .archive-preview-copy { min-width:0; flex:1; }
+    .archive-preview-columns .archive-recent strong { white-space:normal; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; font-size:15px; line-height:1.6; }
+    .archive-gallery .archive-recent li:first-child a { flex-direction:column; align-items:stretch; }
+    .archive-gallery .archive-recent li:first-child .archive-thumb { width:100%; height:auto; flex:auto; aspect-ratio:16/9; }
+    .archive-preview-columns a:focus-visible { outline:2px solid #81624c; outline-offset:4px; }
+    @media(max-width:650px) { .archive-columns.archive-preview-columns { grid-template-columns:1fr; gap:32px; } .archive-thumb { flex-basis:96px; width:96px; height:72px; } }
 </style>
   <link rel="stylesheet" href="main-hero.css?v=20261101">
 </head>
@@ -166,7 +180,7 @@
           <div class="nav-submenu">
             <a href="board.html#notices">공지사항</a>
             <a href="board.html#press">보도 자료</a>
-            <a href="board.html#photos">축제 사진</a>
+            <a href="board.html#photos">갤러리</a>
             <a href="board.html#statistics">통계</a>
           </div>
         </details>
@@ -433,10 +447,10 @@
         <div class="resources-title-row"><h2 id="resources-title">축제 자료실</h2></div>
         <p>축제의 소식과 사진, 기록을 만나보세요.</p>
       </div>
-      <div class="archive-columns"><section class="archive-column" aria-labelledby="recent-notices-title"><div class="archive-column-heading"><h3 id="recent-notices-title">공지사항</h3><a href="board.html#notices" aria-label="공지사항 전체 보기">+</a></div><ul id="recent-notices" class="archive-recent"><li>자료를 불러오고 있습니다.</li></ul></section>
-<section class="archive-column" aria-labelledby="recent-press-title"><div class="archive-column-heading"><h3 id="recent-press-title">보도자료</h3><a href="board.html#press" aria-label="보도자료 전체 보기">+</a></div><ul id="recent-press" class="archive-recent"><li>자료를 불러오고 있습니다.</li></ul></section>
-<section class="archive-column" aria-labelledby="recent-photos-title"><div class="archive-column-heading"><h3 id="recent-photos-title">사진</h3><a href="board.html#photos" aria-label="사진 전체 보기">+</a></div><ul id="recent-photos" class="archive-recent"><li>자료를 불러오고 있습니다.</li></ul></section>
-<section class="archive-column" aria-labelledby="recent-statistics-title"><div class="archive-column-heading"><h3 id="recent-statistics-title">통계</h3><a href="board.html#statistics" aria-label="통계 전체 보기">+</a></div><ul id="recent-statistics" class="archive-recent"><li>자료를 불러오고 있습니다.</li></ul></section></div>
+      <div class="archive-columns archive-preview-columns">
+        <section class="archive-column" aria-labelledby="recent-press-title"><div class="archive-column-heading"><h3 id="recent-press-title">보도자료</h3><a class="archive-view-all" href="board.html#press">전체 보기 →</a></div><ul id="recent-press" class="archive-recent"><li>자료를 불러오고 있습니다.</li></ul></section>
+        <section class="archive-column archive-gallery" aria-labelledby="recent-photos-title"><div class="archive-column-heading"><h3 id="recent-photos-title">갤러리</h3><a class="archive-view-all" href="board.html#photos">전체 보기 →</a></div><ul id="recent-photos" class="archive-recent"><li>자료를 불러오고 있습니다.</li></ul></section>
+      </div>
     </section>
   </main>
 
@@ -493,7 +507,7 @@
       });
     })();
   </script>
-<script src="archive-preview.js?v=20261101-direct" defer></script>
+<script src="archive-preview.js?v=20261102-gallery" defer></script>
 
 <script>
 (() => {

@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="style.css?v=20261102-floating-top">
   <link rel="stylesheet" href="layout.css?v=20261101-white-pastel">
-  <link rel="stylesheet" href="ui.css?v=20261101-white">
+  <link rel="stylesheet" href="ui.css?v=20261105-nav-underline">
   <link rel="stylesheet" href="booths.css?v=20261101-compact">
 
   <style>
@@ -47,11 +47,9 @@
     /* Dropdown navigation for introduction and archive pages. */
     .village-layout .main-nav { align-items:center; overflow:visible; }
     .nav-dropdown { position:relative; }
-    .nav-dropdown summary { position:relative; padding:10px 0; list-style:none; cursor:pointer; font-size:15px; font-weight:700; line-height:1.7; white-space:nowrap; }
+    .nav-dropdown summary { position:relative; padding:8px 0; list-style:none; cursor:pointer; font-size:15px; font-weight:700; line-height:1.7; white-space:nowrap; }
     .nav-dropdown summary::-webkit-details-marker { display:none; }
-    .nav-dropdown summary::after { content:""; position:absolute; left:0; right:0; bottom:0; height:2px; background:#c6ac98; transform:scaleX(0); transition:transform .2s; }
     .nav-dropdown[open] summary,.nav-dropdown summary:hover { color:#81624c; }
-    .nav-dropdown[open] summary::after { transform:scaleX(1); }
     .nav-submenu { position:absolute; left:-22px; top:calc(100% + 12px); z-index:60; min-width:248px; padding:18px 0; border:1px solid #eee8e3; background:#fff; box-shadow:0 12px 28px rgb(42 26 14 / 10%); }
     .village-layout .main-nav .nav-submenu a { display:block; padding:14px 22px; font-size:14px; font-weight:400; white-space:nowrap; color:#2a1a0e; }
     .village-layout .main-nav .nav-submenu a::after { display:none; }
@@ -120,7 +118,6 @@
     }
 
     .nav-dropdown summary.is-current { color:#81624c; }
-    .nav-dropdown summary.is-current::after { transform:scaleX(1); }
   .festival-overview-copy .official-blog-link{margin-top:24px;color:#81624c}
     .village-layout .official-blog-link { padding:14px 24px; border:1px solid #81624c; border-radius:30px; background:#81624c; color:#fff; font-size:15px; font-weight:700; opacity:1; box-shadow:0 6px 16px rgb(129 98 76 / 20%); }
     .village-layout .official-blog-link:hover { background:#654b39; border-color:#654b39; color:#fff; }

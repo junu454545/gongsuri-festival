@@ -3,8 +3,11 @@
 .village-layout .site-header { position:sticky; top:0; z-index:30; box-shadow:0 2px 12px rgb(42 26 14 / 4%); border-bottom:0; }
 .village-layout .header-inner { padding:20px 0; }
 .village-layout .main-nav a { position:relative; font-size:15px; }
-.village-layout .main-nav a::after { content:""; position:absolute; bottom:0; left:0; width:0; height:2px; background:var(--ui-accent); transition:width .2s; }
-.village-layout .main-nav a:hover::after,.village-layout .main-nav a.is-current::after { width:24px; }
+.village-layout .main-nav > a::after,.village-layout .main-nav > .nav-dropdown > summary::after { content:""; position:absolute; bottom:0; left:0; width:0; height:2px; background:var(--ui-accent); transition:width .2s; }
+.village-layout .main-nav > a:hover::after,.village-layout .main-nav > a.is-current::after,
+.village-layout .main-nav > .nav-dropdown > summary:hover::after,
+.village-layout .main-nav > .nav-dropdown > summary.is-current::after,
+.village-layout .main-nav > .nav-dropdown[open] > summary::after { width:24px; }
 .village-layout .hero { margin:24px auto 0; width:min(1320px,calc(100% - 48px)); border-radius:22px; overflow:hidden; background:#ffffff; }
 .village-layout .hero-photo { min-height:540px; }
 .village-layout .hero-inner { min-height:540px; }
@@ -107,7 +110,7 @@
 .village-layout .button-dark:hover { background:#B99B83; color:#35261c; }
 .village-layout .button-outline,.village-layout .quick-links a.is-current,.village-layout .quick-links a:hover { color:#81624C; }
 .village-layout .hero h1 span { color:#81624C; }
-.village-layout .main-nav a::after,.village-layout .quick-links a::after { background:#C6AC98; }
+.village-layout .main-nav > a::after,.village-layout .main-nav > .nav-dropdown > summary::after,.village-layout .quick-links a::after { background:#C6AC98; }
 .village-layout .cover-number { color:#81624C; }
 .village-layout .notice-item summary::after { color:#81624C; }
 .village-layout .festival-footer { background:#fff; color:#2A1A0E; border-top:1px solid #EEE8E3; }
